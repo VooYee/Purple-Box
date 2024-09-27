@@ -13,6 +13,10 @@ const config: Config = {
 				gotham: [
 					'Gotham',
 					'sans-serif'
+				],
+				agrandir: [
+					'Agrandir',
+					'sans-serif'
 				]
 			},
   		colors: {

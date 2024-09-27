@@ -183,6 +183,69 @@ body {
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-GrandHeavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-GrandLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-Narrow.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-TextBold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-ThinItalic.otf');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-Tight.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-WideBlackItalic.otf');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('./fonts/Agrandir/Agrandir-WideLight.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply border-border;
