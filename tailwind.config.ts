@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+				gotham: [
+					'Gotham',
+					'sans-serif'
+				]
+			},
   		colors: {
         'Dark-Indigo': '#18113E',
         'Royal-Purple': '#571FC4',
