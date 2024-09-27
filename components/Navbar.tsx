@@ -31,8 +31,8 @@ const Navbar = () => {
   const pathname = usePathname()
 
   return (
-    <header className='w-full flex flex-col items-center justify-center text-white font-gotham'>
-      <nav className='w-full h-full flex items-center justify-center gap-x-40'>
+    <header className='fixed top-0 w-full flex flex-col items-center justify-center text-white font-gotham z-20'>
+      <nav className='navbar-wrapper w-full h-full flex items-center justify-between'>
         <Link href="/" className='flex items-center gap-x-2'>
           <Image 
             src={PurpleBoxLogo}
