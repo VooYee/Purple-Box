@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import PurpleBoxLogo from '@/public/Purple-Box-Logo.png'
@@ -29,9 +29,30 @@ const navItems = [
 
 const Navbar = () => {
   const pathname = usePathname()
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasScrolled(true)
+      } else {
+        setHasScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <header className='fixed top-0 w-full flex flex-col items-center justify-center text-white font-gotham z-20'>
+    <header className={cn(
+        'fixed top-0 w-full flex flex-col items-center justify-center text-white font-gotham z-20',
+        hasScrolled && 'border-b-[2px] border-Light-Orchid shadow-royal-purple backdrop-blur-lg'
+      )}
+    >
       <nav className='navbar-wrapper w-full h-full flex items-center justify-between'>
         <Link href="/" className='flex items-center gap-x-2'>
           <Image 
