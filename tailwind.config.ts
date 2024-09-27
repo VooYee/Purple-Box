@@ -25,6 +25,7 @@ const config: Config = {
         'Light-Orchid': '#CB6CE6',
         'Lavender-Pink': '#E1A8EC',
         'Pink-Lavender': '#F6C8FF',
+				'Dark-Primary': '#080808',
         'Sky-Blue': '#A0E2F1',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -71,7 +72,10 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+			boxShadow: {
+        'royal-purple': '0 0 25px rgba(87, 31, 196, 1)'
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
