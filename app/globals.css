@@ -89,4 +89,7 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .wrapper {
+    @apply w-full max-w-7xl mx-auto p-4 md:p-6 lg:p-8 flex flex-col items-center
+  }
 }
