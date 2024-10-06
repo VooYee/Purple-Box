@@ -74,6 +74,25 @@ export default function Home() {
         </ul>
       </div>
 
+      {/* FREE TRIAL */}
+      <div className="flex flex-col items-center">
+
+      </div>
+
+      {/* CLIENT SAY */}
+      <div className="flex flex-col items-center">
+
+      </div>
+
+      {/* SEE IN ACTION */}
+      <div className="flex flex-col items-center">
+
+      </div>
+
+      {/* WHO WE SERVE */}
+      <div className="flex flex-col items-center">
+
+      </div>
     </div>
   );
 }
