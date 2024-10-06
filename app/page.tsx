@@ -5,6 +5,8 @@ import Showcase from "@/public/home/Showcase.png"
 import LeftInfo from "@/public/home/LeftInfo.png"
 import RightInfo from "@/public/home/RightInfo.png"
 
+
+
 export default function Home() {
   return (
     <div className="wrapper flex flex-col items-center gap-y-16">
@@ -43,8 +45,13 @@ export default function Home() {
         />
         <Image 
           src={RightInfo}
+          alt="Right Info"
+          className="absolute translate-x-[250px] w-[250px] translate-y-[-10px]"
+        />
+        <Image 
+          src={LeftInfo}
           alt="Left Info"
-          className="absolute translate-x-[250px] w-[225px] translate-y-[-25px]"
+          className="absolute translate-x-[-250px] w-[250px] translate-y-[100px]"
         />
       </div>
 
