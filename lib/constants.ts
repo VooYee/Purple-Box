@@ -4,7 +4,7 @@ import { ChartColumnIncreasing } from 'lucide-react';
 import { Headset } from 'lucide-react';
 import { ChartNoAxesCombined } from 'lucide-react';
 
-const transformWithPurpleBoxData = [
+export const transformWithPurpleBoxData = [
   {
     title: "CRM Integration",
     description: "Seamlessly integrate with existing CRM systems for better data management and customer relationship optimization.",

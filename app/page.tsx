@@ -4,8 +4,7 @@ import EllipseGradient from "@/public/EllipseGradient.png"
 import Showcase from "@/public/home/Showcase.png"
 import LeftInfo from "@/public/home/LeftInfo.png"
 import RightInfo from "@/public/home/RightInfo.png"
-
-
+import { transformWithPurpleBoxData } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -58,6 +57,17 @@ export default function Home() {
       {/* TRANSOFRM ECOMMERCE */}
       <div className="w-full text-center flex flex-col items-center justify-center gap-y-12 relative">
         <h5 className="font-gotham text-4xl font-bold">Transform <span className="text-gradient">Your E-Commerce</span> With Purple Box</h5>
+        <ul>
+          {transformWithPurpleBoxData.map((item, index) => {
+            return (
+              <li key={index}>
+                {item.title}
+                {item.description}
+                
+              </li> 
+            )
+          })}
+        </ul>
       </div>
 
     </div>
