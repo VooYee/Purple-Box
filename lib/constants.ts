@@ -31,3 +31,68 @@ export const transformWithPurpleBoxData = [
     image: ChartColumnIncreasing
   }
 ]
+
+export const customerTestimonialsData = [
+  {
+    quote: "Purple-Box streamlined our customer support process, allowing us to resolve queries twice as fast. Our customers are happier, and our team is more efficient than ever!",
+    name: "Sarah Lopez",
+    position: "Head of Customer Experience",
+    company: "TrendyThreads",
+    logo: "/logos/trendythreads-logo.png",
+    profileImage: "/images/sarah-lopez.png"
+  },
+  {
+    quote: "With Purple-Box, we’ve seen a 30% increase in client acquisition. The AI-powered insights helped us understand our customers like never before!",
+    name: "Michael Chen",
+    position: "Marketing Director",
+    company: "GlowVibes",
+    logo: "/logos/glowvibes-logo.png",
+    profileImage: "/images/michael-chen.png"
+  },
+  {
+    quote: "Scheduling and managing client interactions is a breeze with Purple-Box. The integration across channels keeps everything organized in one place, saving us hours every week.",
+    name: "Emily Parker",
+    position: "COO",
+    company: "LuxeEssentials",
+    logo: "/logos/luxeessentials-logo.png",
+    profileImage : "/images/emily-parker.png"
+  }
+]
+
+export const whoWeServeData = [
+  {
+    "profile": "Small and Medium Businesses (SMBs)",
+    "description": "Enhance scalability and customer engagement with AI-powered solutions, giving SMBs the tools to compete with larger brands.",
+    "icon": "/icons/smb-icon.png"
+  },
+  {
+    "profile": "Subscription Box Services",
+    "description": "Streamline customer management and track subscription renewals, helping subscription businesses retain loyal customers.",
+    "icon": "/icons/subscription-box-icon.png"
+  },
+  {
+    "profile": "Direct-to-Consumer (DTC) Brands",
+    "description": "Utilize data-driven insights to personalize customer experiences and increase repeat purchases for DTC brands.",
+    "icon": "/icons/dtc-icon.png"
+  },
+  {
+    "profile": "E-commerce Retailers",
+    "description": "Optimize inventory and enhance customer support, making e-commerce operations smoother and more responsive to demand.",
+    "icon": "/icons/ecommerce-icon.png"
+  },
+  {
+    "profile": "Local Retailers",
+    "description": "Expand reach and simplify customer interactions with an integrated CRM solution tailored for small, community-focused businesses.",
+    "icon": "/icons/local-retail-icon.png"
+  },
+  {
+    "profile": "Service Providers",
+    "description": "Manage client relationships and improve service quality with tools that make scheduling and follow-up easy and efficient.",
+    "icon": "/icons/service-providers-icon.png"
+  },
+  {
+    "profile": "Health and Wellness Brands",
+    "description": "Create meaningful engagement and support client journeys with features that prioritize personalized customer care.",
+    "icon": "/icons/health-wellness-icon.png"
+  }
+]

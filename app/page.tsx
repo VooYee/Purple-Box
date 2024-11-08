@@ -4,14 +4,19 @@ import EllipseGradient from "@/public/EllipseGradient.png"
 import Showcase from "@/public/home/Showcase.png"
 import LeftInfo from "@/public/home/LeftInfo.png"
 import RightInfo from "@/public/home/RightInfo.png"
-import { transformWithPurpleBoxData } from "@/lib/constants";
+import { transformWithPurpleBoxData, whoWeServeData } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
+import { customerTestimonialsData } from '@/lib/constants'
+import Dummy from '@/public/Purple-Box-Logo.png'
+import { BriefcaseBusiness } from 'lucide-react';
+
 
 export default function Home() {
   return (
-    <div className="wrapper flex flex-col items-center gap-y-16">
+    <div className="flex flex-col items-center gap-y-16">
       
       {/* HERO */}
-      <div className="mt-[80px] w-full text-center h-[500px] flex flex-col items-center justify-center gap-y-4 relative">
+      <div className="wrapper mt-[120px] w-full text-center h-[500px] flex flex-col items-center justify-center gap-y-4 relative">
         <h3 className="text-4xl font-bold font-gotham">Grow <span className="text-gradient">Smart</span>, Sell More</h3>
         <h5 className="text-xl">Unlock the power of AI with Purple-Box, the multichannel chatbot <br/> designed for e-commerce growth.</h5>
         <Image 
@@ -29,7 +34,7 @@ export default function Home() {
       </div>
 
       {/* SHOWCASE */}
-      <div className="w-full text-center flex flex-col items-center justify-center gap-y-12 relative">
+      <div className="wrapper w-full text-center flex flex-col items-center justify-center gap-y-12 relative">
         <p className="text-xl text-center">AI-powered multichannel chatbot designed for e-commerce <br/> businesses to enhance customer acquisition and provide seamless 24/7 support.</p>
         <Image 
           src={Showcase}
@@ -55,7 +60,7 @@ export default function Home() {
       </div>
 
       {/* TRANSOFRM ECOMMERCE */}
-      <div className="w-full text-center flex flex-col items-center justify-center gap-y-12 relative">
+      <div className="wrapper w-full text-center flex flex-col items-center justify-center gap-y-12 relative">
         <h5 className="font-gotham text-4xl font-bold">Transform <span className="text-gradient">Your E-Commerce</span> With Purple Box</h5>
         <ul className="flex flex-wrap justify-center gap-8">
           {transformWithPurpleBoxData.map((item, index) => {
@@ -75,23 +80,71 @@ export default function Home() {
       </div>
 
       {/* FREE TRIAL */}
-      <div className="flex flex-col items-center">
-
+      <div className="wrapper w-full flex flex-col items-center gap-y-12 my-36">
+        <h5 className="font-gotham text-4xl font-bold">Take the Next Step with <span className="text-gradient">Purple Box</span></h5>
+          <div className="flex items-center justify-center gap-x-8 font-gotham">
+            <Button variant={"default"} className="background-gradient">
+              Get Started
+            </Button>
+            <Button variant={"outline"} className="border-purple-400 text-purple-400">
+              Schedule A Demo
+            </Button>
+            <Button variant={"secondary"}>
+              Learn More
+            </Button>
+          </div>
       </div>
 
       {/* CLIENT SAY */}
-      <div className="flex flex-col items-center">
-
+      <div className="flex flex-col items-center gap-y-12 py-24 bg-Royal-Purple/50 w-full h-full shadow-lg">
+          <h5 className="font-gotham text-4xl font-bold">What Our Clients Say</h5>
+          <ul className="max-w-7xl w-full flex justify-between gap-8">
+            {customerTestimonialsData.map((item, index) => {
+              return (
+                <div key={index} className="p-4 border-white border-2 rounded-xl flex flex-col items-start gap-y-4">
+                  <div className="flex gap-x-2 items-center">
+                    <Image 
+                      src={Dummy}
+                      alt={item.name}
+                      className="w-[50px] h-[50px] object-cover"
+                    />
+                    <div className="text-start">
+                      <p className="font-bold">{item.name}</p>
+                      <p className="text-sm text-white/50">{item.position} @ {item.company}</p>
+                    </div>
+                  </div>
+                  <p className="text-white text-center">"{item.quote}"</p>
+                </div>
+              )
+            })}
+          </ul>
       </div>
 
       {/* SEE IN ACTION */}
-      <div className="flex flex-col items-center">
-
+      <div className="flex flex-col items-center gap-y-12">
+        <h5 className="font-gotham text-4xl font-bold">See Purple-Box in Action</h5>
+        <div>
+          <Image 
+            src={RobotPad}
+            alt="RobotPad"
+            width={500}
+            height={500}
+          />
+        </div>
       </div>
 
       {/* WHO WE SERVE */}
-      <div className="flex flex-col items-center">
-
+      <div className="flex flex-col items-center gap-y-12">
+        <h5 className="font-gotham text-4xl font-bold text-gradient">Who We Serve</h5>
+        <ul className="max-w-7xl w-full flex justify-between gap-8">
+            {whoWeServeData.map((item, index) => {
+              return (
+                <div key={index} className="p-4 border-white border-2 rounded-xl flex flex-col items-start gap-y-4">
+               
+                </div>
+              )
+            })}
+          </ul>
       </div>
     </div>
   );
