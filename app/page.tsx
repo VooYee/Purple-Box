@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { customerTestimonialsData } from '@/lib/constants'
 import Dummy from '@/public/Purple-Box-Logo.png'
 import { BriefcaseBusiness } from 'lucide-react';
-
+import { Box } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 export default function Home() {
   return (

@@ -71,28 +71,8 @@ export const whoWeServeData = [
     "icon": "/icons/subscription-box-icon.png"
   },
   {
-    "profile": "Direct-to-Consumer (DTC) Brands",
-    "description": "Utilize data-driven insights to personalize customer experiences and increase repeat purchases for DTC brands.",
-    "icon": "/icons/dtc-icon.png"
-  },
-  {
-    "profile": "E-commerce Retailers",
-    "description": "Optimize inventory and enhance customer support, making e-commerce operations smoother and more responsive to demand.",
-    "icon": "/icons/ecommerce-icon.png"
-  },
-  {
     "profile": "Local Retailers",
     "description": "Expand reach and simplify customer interactions with an integrated CRM solution tailored for small, community-focused businesses.",
     "icon": "/icons/local-retail-icon.png"
   },
-  {
-    "profile": "Service Providers",
-    "description": "Manage client relationships and improve service quality with tools that make scheduling and follow-up easy and efficient.",
-    "icon": "/icons/service-providers-icon.png"
-  },
-  {
-    "profile": "Health and Wellness Brands",
-    "description": "Create meaningful engagement and support client journeys with features that prioritize personalized customer care.",
-    "icon": "/icons/health-wellness-icon.png"
-  }
 ]
