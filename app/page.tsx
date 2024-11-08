@@ -140,8 +140,9 @@ export default function Home() {
         <ul className="max-w-7xl w-full flex justify-between gap-8">
             {whoWeServeData.map((item, index) => {
               return (
-                <div key={index} className="p-4 border-white border-2 rounded-xl flex flex-col items-start gap-y-4">
-               
+                <div key={index} className="p-4 border-white border-2 rounded-xl flex flex-col items-start gap-y-4 text-white">
+                  <p>{item.profile}</p>
+                  <p>{item.description}</p>
                 </div>
               )
             })}
