@@ -95,3 +95,41 @@ export const coreValuesData = [
       "description": "We empower our clients to achieve their fullest potential by providing tools that transform their operations and drive success."
   }
 ]
+
+export const teamData = [
+  {
+    "photo": "placeholder_headshot_url",
+    "name": "Sarah Johnson",
+    "title": "CEO",
+    "bio": "With over 15 years in tech leadership, Sarah has driven innovation across multiple startups. As CEO of Purple-Box, she focuses on AI-driven customer experience solutions. Sarah is passionate about scaling businesses and enhancing customer retention.",
+    "linkedin": "linkedin_url"
+  },
+  {
+    "photo": "placeholder_headshot_url",
+    "name": "David Kim",
+    "title": "Head of AI Development",
+    "bio": "David, a Ph.D. in Computer Science, specializes in machine learning and AI-driven solutions. Leading AI Development at Purple-Box, he ensures our platform delivers intelligent and responsive customer insights. His work empowers businesses to exceed client expectations.",
+    "linkedin": "linkedin_url"
+  },
+  {
+    "photo": "placeholder_headshot_url",
+    "name": "Emily Chen",
+    "title": "Marketing Director",
+    "bio": "Emily brings a decade of experience in digital marketing and branding to Purple-Box. Her campaigns have consistently boosted brand engagement and customer acquisition. Emily is dedicated to creating meaningful connections between brands and their customers.",
+    "linkedin": "linkedin_url"
+  },
+  {
+    "photo": "placeholder_headshot_url",
+    "name": "Raj Patel",
+    "title": "CTO",
+    "bio": "With a background in software architecture and cloud computing, Raj leads Purple-Box's tech strategy and innovation. He has a talent for creating scalable, secure platforms that support business growth and customer satisfaction.",
+    "linkedin": "linkedin_url"
+  },
+  {
+    "photo": "placeholder_headshot_url",
+    "name": "Lisa Nguyen",
+    "title": "Customer Success Manager",
+    "bio": "Lisa has over eight years of experience in customer relationship management. She is dedicated to ensuring that our clients derive maximum value from Purple-Box. Her focus on support and onboarding has elevated user satisfaction.",
+    "linkedin": "linkedin_url"
+  }
+]

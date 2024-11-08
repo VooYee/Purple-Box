@@ -1,5 +1,5 @@
 import React from 'react'
-import { coreValuesData } from '@/lib/constants'
+import { coreValuesData, teamData } from '@/lib/constants'
 
 const AboutUsPage = () => {
   return (
@@ -7,7 +7,7 @@ const AboutUsPage = () => {
 
       {/* Our Vision and Mission */}
       <div className='wrapper mt-[120px] flex flex-col items-center gap-y-8'>
-        <h5 className="text-4xl font-bold font-gotham">Our Vision and Mission</h5>
+        <h5 className="text-4xl font-bold font-gotham">Our <span className='text-gradient'>Vision</span> and <span className='text-gradient'>Mission</span></h5>
         <div className='w-full flex justify-center gap-x-8 text-white text-center'>
           <div className='w-full border-2 border-white rounded-xl p-6 space-y-4'>
             <p>Vision</p>
@@ -22,7 +22,7 @@ const AboutUsPage = () => {
 
       {/* Our Story */}
       <div className='wrapper flex flex-col gap-y-8'>
-        <h5 className="text-4xl font-bold font-gotham">Our Story</h5>
+        <h5 className="text-4xl font-bold font-gotham">Our <span className='text-gradient'>Story</span></h5>
         <div className='flex flex-col w-full gap-y-8'>
           <div className='w-full flex gap-x-8 items-center'>
             <div className='h-[200px] w-full rounded-xl border-2 border-white'>
@@ -45,7 +45,7 @@ const AboutUsPage = () => {
 
       {/* Core Values */}
       <div className='wrapper flex flex-col gap-y-8'>
-        <h5 className="text-4xl font-bold font-gotham">Our Core Values</h5>
+        <h5 className="text-4xl font-bold font-gotham">Our <span className='text-gradient'>Core Values</span></h5>
         <ul className='w-full flex gap-x-8'>
           {coreValuesData.map((item, index) => {
               return (
@@ -56,6 +56,27 @@ const AboutUsPage = () => {
               )
             })}
         </ul>
+      </div>
+
+      {/* Meet Our Team */}
+      <div className='wrapper flex flex-col gap-y-8'>
+        <h5 className="text-4xl font-bold font-gotham"><span className='text-gradient'>Meet</span> Our Team</h5>
+        <ul className='flex w-full justify-between gap-x-4'>
+          {teamData.map((item, index) => {
+            return (
+              <div key={index} className="w-full p-4 border-white border-2 rounded-xl flex flex-col items-center gap-y-2 text-white text-center">
+                <p className='text-xl font-bold text-center'>{item.name}</p>
+                <p>{item.title}</p>
+                <p className='text-sm'>{item.bio}</p>
+              </div>
+            )
+          })}
+        </ul>
+      </div>
+
+      {/* Media and Awards */}
+      <div className='wrapper flex flex-col gap-y-8'>
+        <h5 className="text-4xl font-bold font-gotham">In the Media & Recognitions</h5>
       </div>
 
     </div>
