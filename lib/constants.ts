@@ -76,3 +76,22 @@ export const whoWeServeData = [
     "icon": "/icons/local-retail-icon.png"
   },
 ]
+
+export const coreValuesData = [
+  {
+      "title": "Efficient",
+      "description": "We believe in delivering solutions that maximize productivity and reduce overhead for businesses, allowing them to focus on growth."
+  },
+  {
+      "title": "Scalable",
+      "description": "Our technology is designed to grow with our clients, providing adaptable solutions that scale effortlessly with their expanding needs."
+  },
+  {
+      "title": "Innovative",
+      "description": "Innovation is at the heart of what we do. We constantly push the boundaries of what's possible with AI to provide the best solutions."
+  },
+  {
+      "title": "Empowering",
+      "description": "We empower our clients to achieve their fullest potential by providing tools that transform their operations and drive success."
+  }
+]

@@ -123,7 +123,7 @@ export default function Home() {
 
       {/* SEE IN ACTION */}
       <div className="flex flex-col items-center gap-y-12">
-        <h5 className="font-gotham text-4xl font-bold">See Purple-Box in Action</h5>
+        <h5 className="font-gotham text-4xl font-bold">See <span className="text-gradient">Purple-Box</span> in Action</h5>
         <div>
           <Image 
             src={RobotPad}
@@ -148,6 +148,8 @@ export default function Home() {
             })}
           </ul>
       </div>
+
+      <div className="mb-20" />
     </div>
   );
 }
