@@ -8,9 +8,6 @@ import { transformWithPurpleBoxData, whoWeServeData } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { customerTestimonialsData } from '@/lib/constants'
 import Dummy from '@/public/Purple-Box-Logo.png'
-import { BriefcaseBusiness } from 'lucide-react';
-import { Box } from 'lucide-react';
-import { ShoppingCart } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -114,7 +111,7 @@ export default function Home() {
                       <p className="text-sm text-white/50">{item.position} @ {item.company}</p>
                     </div>
                   </div>
-                  <p className="text-white text-center">"{item.quote}"</p>
+                  <p className="text-white text-center">&quot;{item.quote}&quot;</p>
                 </div>
               )
             })}
