@@ -1,6 +1,3 @@
-// Library Import
-import React from 'react'
-
 // Constants Imports
 import { whoWeServeData } from '@/lib/constants'
 

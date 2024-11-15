@@ -1,15 +1,9 @@
-// Library Import
-import Image from "next/image";
-
-// Constants Imports
-import { whoWeServeData } from "@/lib/constants";
-
-// Component Imports
+// Components Imports
 import Hero from "@/components/home/Hero";
 import Showcase from "@/components/home/Showcase";
 import Transform from "@/components/home/Transform";
 import FreeTrial from "@/components/home/FreeTrial";
-import ClientSay from "@/components/ClientSay";
+import ClientSay from "@/components/home/ClientSay";
 import SeeInAction from "@/components/home/SeeInAction";
 import WhoWeServe from "@/components/home/WhoWeServe";
 

@@ -1,5 +1,4 @@
 // Library Import
-import React from 'react'
 import Image from 'next/image'
 
 // Components Imports
@@ -19,9 +18,7 @@ const Hero = () => {
         width={500}
         height={500}
       />
-      <EllipseGradient 
-        className="absolute -z-20"
-      />
+      <EllipseGradient />
       <div className="w-full max-w-md rounded-full background-gradient shadow-royal-purple h-[4px] my-4" />
     </div>
   )

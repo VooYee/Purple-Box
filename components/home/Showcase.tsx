@@ -1,5 +1,4 @@
 // Library Import
-import React from 'react'
 import Image from 'next/image'
 
 // Components Import
@@ -21,7 +20,7 @@ const Showcase = () => {
         height={450}
       />
       <EllipseGradient 
-        className="absolute right-[500px] -z-20"
+        className="right-[500px]"
       />
       <Image 
         src={RightInfo}

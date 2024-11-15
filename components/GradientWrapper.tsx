@@ -4,19 +4,22 @@ import { cn } from '@/lib/utils';
 const GradientWrapper = ({ 
   children,
   classNameWrapper,
-  classNameContent
+  classNameContent,
+  useShadow
 }:{
   children: ReactNode;
-  classNameWrapper: string;
-  classNameContent: string;
+  classNameWrapper?: string;
+  classNameContent?: string;
+  useShadow?: boolean;
 }) => {
   return (
     <div className={cn(
-      'background-gradient p-[2px] shadow-royal-purple', 
-      classNameWrapper
+      'background-gradient p-[2px]', 
+      classNameWrapper,
+      useShadow && 'shadow-royal-purple'
     )}>
       <div className={cn(
-        'w-full h-full bg-Dark-Primary', 
+        'w-full h-full bg-Dark-Primary p-4', 
         classNameContent
       )}>
         {children}

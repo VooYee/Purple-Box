@@ -1,5 +1,4 @@
 // Library Import
-import React from 'react'
 import Image from 'next/image'
 
 // Asset Imports

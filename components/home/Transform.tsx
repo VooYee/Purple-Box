@@ -1,8 +1,9 @@
-// Library Import
-import React from 'react'
-
 // Constants Imports
 import { transformWithPurpleBoxData } from '@/lib/constants'
+
+// Components Imports
+import GradientWrapper from '../GradientWrapper'
+import EllipseGradient from '../EllipseGradient'
 
 const Transform = () => {
   return (
@@ -13,16 +14,21 @@ const Transform = () => {
           const Icon = item.image
 
           return (
-            <li key={index} className="max-w-[350px] border-2 border-white rounded-[25px] p-4 flex flex-col items-center gap-y-4">
+            <GradientWrapper 
+              key={index}
+              classNameWrapper='max-w-[350px] rounded-[25px]'
+              classNameContent='flex flex-col rounded-[25px] items-center gap-y-4 p-4'
+            >
               <Icon className="w-8 h-8" />
-              <div className="flex flex-col items-center gap-y-2">
-                <p className="text-xl">{item.title}</p>
-                <p>{item.description}</p>
-              </div>
-            </li> 
+               <div className="flex flex-col items-center gap-y-2">
+                 <p className="text-xl">{item.title}</p>
+                 <p>{item.description}</p>
+               </div>
+            </GradientWrapper>
           )
         })}
       </ul>
+      <EllipseGradient className='left-[500px]' />
     </div>
   )
 }
