@@ -6,7 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 // Icons Import
-import { FaChartLine, FaRobot, FaEnvelope, FaCogs, FaComments } from 'react-icons/fa';
+import { FaEnvelope, FaCogs, FaComments } from 'react-icons/fa';
 
 const MarketingAutomation = () => {
   // Intersection Observer

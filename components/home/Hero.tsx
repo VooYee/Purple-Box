@@ -4,9 +4,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-// Components Imports
-import EllipseGradient from '../EllipseGradient';
-
 // Asset Imports
 import RobotPad from "@/public/home/RobotPad.png";
 

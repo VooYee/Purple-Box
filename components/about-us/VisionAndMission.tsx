@@ -62,7 +62,7 @@ const VisionAndMission = () => {
         variants={textVariants}
       >
         <p className="lg:text-2xl italic bg-gradient-to-r from-purple-400 to-purple-600 p-4 rounded-lg">
-          "To revolutionize e-commerce with AI, empowering businesses to innovate and grow with scalable, efficient, and cutting-edge solutions."
+        &quot;To revolutionize e-commerce with AI, empowering businesses to innovate and grow with scalable, efficient, and cutting-edge solutions.&quot;
         </p>
       </motion.div>
 

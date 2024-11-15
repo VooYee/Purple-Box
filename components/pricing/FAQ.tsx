@@ -6,7 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const FAQ = () => {
   const [faqOpen, setFaqOpen] = useState(null);
 
-  const toggleFAQ = (index:any) => {
+  // @ts-ignore
+  const toggleFAQ = (index) => {
     setFaqOpen(faqOpen === index ? null : index);
   };
 

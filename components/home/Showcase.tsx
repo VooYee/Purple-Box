@@ -6,9 +6,6 @@ import Image from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-// Components Import
-import EllipseGradient from '../EllipseGradient';
-
 // Assets Import
 import LeftInfo from "@/public/home/LeftInfo.png";
 import RightInfo from "@/public/home/RightInfo.png";

@@ -57,7 +57,7 @@ const Intro = () => {
         className="max-w-3xl mx-auto text-md lg:text-lg text-purple-200"
         variants={textVariants}
       >
-        At Purple-Box, we offer a range of pricing plans tailored to fit the needs of businesses of all sizes. Whether you're just getting started or looking to scale, we have the right plan for you. Explore our plans and find the perfect match for your business needs.
+        At Purple-Box, we offer a range of pricing plans tailored to fit the needs of businesses of all sizes. Whether you&apos;re just getting started or looking to scale, we have the right plan for you. Explore our plans and find the perfect match for your business needs.
       </motion.p>
     </motion.div>
   );

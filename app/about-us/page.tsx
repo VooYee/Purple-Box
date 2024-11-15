@@ -1,9 +1,5 @@
 // Library Import
 import React from 'react';
-import Image from 'next/image';
-
-// Assets Import
-import AwardIcon from '@/public/Purple-Box-Logo.png'; 
 
 // Components Import
 import VisionAndMission from '@/components/about-us/VisionAndMission';
