@@ -18,6 +18,7 @@ const Transform = () => {
               key={index}
               classNameWrapper='max-w-[350px] rounded-[25px]'
               classNameContent='flex flex-col rounded-[25px] items-center gap-y-4 p-4'
+              useShadow={true}
             >
               <Icon className="w-8 h-8" />
                <div className="flex flex-col items-center gap-y-2">

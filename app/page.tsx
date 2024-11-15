@@ -9,7 +9,7 @@ import WhoWeServe from "@/components/home/WhoWeServe";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center gap-y-16">
+    <div className="bg-[#1a0730] relative flex flex-col items-center gap-y-16">
       <Hero />
       <Showcase />
       <Transform />

@@ -43,11 +43,11 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="w-full">
+          <div className="w-full space-y-2">
             <h6 className="font-bold text-lg mb-4">Contact Us</h6>
-            <p className="text-purple-200">Email: contact@purplebox.com</p>
-            <p className="text-purple-200">Phone: +123 456 7890</p>
-            <p className="text-purple-200">Address: 123 Purple St., Suite 101, Metropolis</p>
+            <p className="text-purple-200">contact@purplebox.com</p>
+            <p className="text-purple-200">+123 456 7890</p>
+            <p className="text-purple-200">123 Purple St., Suite 101, Metropolis</p>
           </div>
 
           {/* Newsletter Signup */}

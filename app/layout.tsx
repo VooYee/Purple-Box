@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='font-agrandir antialiased'>
+      <body className='font-agrandir antialiased bg-[#1a0730] '>
         <Navbar />
         {children}
         <Footer />

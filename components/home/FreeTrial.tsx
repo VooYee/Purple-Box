@@ -3,7 +3,8 @@ import { Button } from '../ui/button'
 
 const FreeTrial = () => {
   return (
-    <div className="wrapper w-full flex flex-col items-center gap-y-12 my-24">
+    <div className="wrapper w-full flex flex-col items-center gap-y-12 my-12">
+      <div className='w-[250px] bg-purple-500 h-[2px] rounded-full shadow-royal-purple' />
       <h5 className="font-gotham text-4xl font-bold">
         Take the Next Step with <span className="text-gradient">Purple Box</span>
       </h5>

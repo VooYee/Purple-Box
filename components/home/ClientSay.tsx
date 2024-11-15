@@ -10,7 +10,7 @@ import { customerTestimonialsData } from '@/lib/constants'
 
 const ClientSay = () => {
   return (
-    <div className="flex flex-col items-center gap-y-12 py-24 w-full h-full bg-gradient-to-b from-[#1a0730] to-[#3c1361] shadow-lg">
+    <div className="flex flex-col items-center gap-y-12 py-24 w-full h-full bg-[#3c1361] shadow-lg">
       <h5 className="font-gotham text-4xl font-bold text-white tracking-wide">
         What Our Clients Say
       </h5>

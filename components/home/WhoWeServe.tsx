@@ -13,6 +13,7 @@ const WhoWeServe = () => {
                 key={index}
                 classNameContent='rounded-xl flex flex-col items-center gap-y-4 text-center p-6'
                 classNameWrapper='rounded-xl'
+                useShadow={true}
               >
                 <p className='font-bold text-xl'>{item.profile}</p>
                 <p>{item.description}</p>
