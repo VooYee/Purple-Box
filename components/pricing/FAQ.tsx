@@ -4,10 +4,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FAQ = () => {
-  const [faqOpen, setFaqOpen] = useState(null);
+  const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
-  // @ts-ignore
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number): void => {
     setFaqOpen(faqOpen === index ? null : index);
   };
 

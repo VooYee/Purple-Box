@@ -1,7 +1,7 @@
 'use client'
 
 // Library Import
-import React, { useState } from 'react';
+import React from 'react';
 
 // Components Import
 import Intro from '@/components/pricing/Intro';

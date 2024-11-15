@@ -10,7 +10,6 @@ import { transformWithPurpleBoxData } from '@/lib/constants';
 
 // Components Imports
 import GradientWrapper from '../GradientWrapper';
-import EllipseGradient from '../EllipseGradient';
 
 const Transform = () => {
   // Intersection Observer
