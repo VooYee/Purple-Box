@@ -53,7 +53,7 @@ const TeamIntroduction = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-4xl font-bold text-center font-gotham"
+        className="text-3xl lg:text-4xl font-bold text-center font-gotham"
         variants={cardVariants}
       >
         Meet Our Team
@@ -61,7 +61,7 @@ const TeamIntroduction = () => {
 
       {/* Animated Team Cards */}
       <motion.div
-        className="flex justify-center gap-8"
+        className="flex flex-col items-center md:flex-row justify-center gap-8 w-full "
         variants={containerVariants}
       >
         {[
@@ -71,7 +71,7 @@ const TeamIntroduction = () => {
         ].map((member, index) => (
           <motion.div
             key={index}
-            className="text-center space-y-3 rounded-lg border-2 border-purple-500 bg-purple-700 p-4"
+            className="text-center space-y-3 rounded-lg border-2 border-purple-500 bg-purple-700 p-4 w-full"
             variants={cardVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -86,7 +86,7 @@ const TeamIntroduction = () => {
             <h3 className="text-xl font-semibold">{member.name}</h3>
             <p className="text-purple-200">{member.title}</p>
             <p className="text-sm">{member.bio}</p>
-            <a href="#" className="text-purple-400 mt-4 hover:text-purple-500">
+            <a href="#" className="text-purple-400 mt-6 w-full flex justify-center hover:text-purple-500">
               <FaLinkedin size={20} />
             </a>
           </motion.div>

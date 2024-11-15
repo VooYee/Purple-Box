@@ -50,7 +50,7 @@ const VisionAndMission = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-4xl font-bold font-gotham"
+        className="text-3xl lg:text-4xl font-bold font-gotham"
         variants={textVariants}
       >
         Our Vision and Mission
@@ -61,7 +61,7 @@ const VisionAndMission = () => {
         className="shadow-royal-purple"
         variants={textVariants}
       >
-        <p className="text-2xl italic bg-gradient-to-r from-purple-400 to-purple-600 p-4 rounded-lg">
+        <p className="lg:text-2xl italic bg-gradient-to-r from-purple-400 to-purple-600 p-4 rounded-lg">
           "To revolutionize e-commerce with AI, empowering businesses to innovate and grow with scalable, efficient, and cutting-edge solutions."
         </p>
       </motion.div>

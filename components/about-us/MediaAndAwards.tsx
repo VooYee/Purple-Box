@@ -50,7 +50,7 @@ const MediaAndAwards = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-4xl font-bold font-gotham"
+        className="text-3xl lg:text-4xl font-bold font-gotham"
         variants={cardVariants}
       >
         In the Media & Recognitions
@@ -58,7 +58,7 @@ const MediaAndAwards = () => {
 
       {/* Animated Awards */}
       <motion.div
-        className="flex justify-center gap-6"
+        className="flex flex-col md:flex-row justify-center gap-6"
         variants={containerVariants}
       >
         {[

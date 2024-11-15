@@ -55,7 +55,7 @@ const OurStory = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-4xl font-gotham font-bold text-center"
+        className="text-3xl lg:text-4xl font-gotham font-bold text-center"
         variants={textVariants}
       >
         Our <span className="text-gradient">Story</span>
@@ -64,11 +64,11 @@ const OurStory = () => {
       {/* Animated Content */}
       <div className="space-y-4">
         <motion.div
-          className="w-full flex justify-between gap-x-12 items-center"
+          className="w-full flex flex-col md:flex-row justify-between gap-x-12 items-center"
           variants={containerVariants}
         >
           <motion.p
-            className="max-w-2xl text-start"
+            className="max-w-2xl text-center md:text-start"
             variants={textVariants}
           >
             Purple-Box was born out of a desire to simplify and enhance e-commerce operations for businesses of all sizes. Our founders, a group of passionate AI developers and e-commerce veterans, recognized a common challenge: the need for smart, automated solutions to handle customer acquisition and support in a digital-first world.
@@ -85,7 +85,7 @@ const OurStory = () => {
         </motion.div>
 
         <motion.div
-          className="w-full flex justify-between gap-x-12 items-center"
+          className="w-full flex-col-reverse md:flex-row flex justify-between gap-x-12 items-center"
           variants={containerVariants}
         >
           <motion.div variants={imageVariants}>
@@ -98,7 +98,7 @@ const OurStory = () => {
             />
           </motion.div>
           <motion.p
-            className="max-w-2xl text-end"
+            className="max-w-2xl text-center md:text-end"
             variants={textVariants}
           >
             Since our inception, we have grown from a small startup into a leading AI solutions provider, trusted by businesses across Europe and North America. With every step forward, we’ve expanded our capabilities, refined our technology, and continued to innovate to meet the evolving needs of our clients.

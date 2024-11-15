@@ -49,7 +49,7 @@ const CoreValues = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-4xl font-bold text-center font-gotham"
+        className="text-3xl lg:text-4xl font-bold text-center font-gotham"
         variants={cardVariants}
       >
         Our Core Values

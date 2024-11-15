@@ -46,7 +46,7 @@ const CallToAction = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-3xl font-bold font-gotham"
+        className="text-xl lg:text-3xl font-bold font-gotham"
         variants={buttonVariants}
       >
         Ready to Transform Your Business?
