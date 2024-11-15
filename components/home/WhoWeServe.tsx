@@ -50,7 +50,7 @@ const WhoWeServe = () => {
     >
       {/* Animated Title */}
       <motion.h5
-        className="font-gotham text-4xl font-bold text-gradient"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-gradient"
         variants={cardVariants}
       >
         Who We Serve
@@ -58,7 +58,7 @@ const WhoWeServe = () => {
 
       {/* Animated List of Profiles */}
       <motion.ul
-        className="max-w-7xl w-full flex justify-between gap-8"
+        className="max-w-7xl w-full flex flex-col lg:flex-row justify-between gap-8"
         variants={containerVariants}
       >
         {whoWeServeData.map((item, index) => (

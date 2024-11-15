@@ -1,31 +1,31 @@
 "use client"
 
+// Library Import
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import PurpleBoxLogo from '@/public/Purple-Box-Logo.png'
-import { Button } from './ui/button'
 import { usePathname } from 'next/navigation'
+
+// Utils Import
 import { cn } from '@/lib/utils'
 
-const navItems = [
-  {
-    name: "HOME",
-    path: "/",
-  },
-  {
-    name: "ABOUT US",
-    path: "/about-us"
-  },
-  {
-    name: "OUR SERVICES",
-    path: "/our-services"
-  },
-  {
-    name: "PRICING",
-    path: "/pricing"
-  }
-]
+// Constants Import
+import { navItems } from '@/lib/constants'
+
+// Icons Import
+import { Menu } from 'lucide-react';
+
+// Component Import
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Button } from './ui/button'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -64,7 +64,7 @@ const Navbar = () => {
           <h1 className='text-xl'>Purple Box</h1>
         </Link>
 
-        <div className='space-x-12'> 
+        <div className='space-x-12 hidden lg:block'> 
           {navItems.map((item, index) => (
             <Link 
               key={index} 
@@ -78,13 +78,32 @@ const Navbar = () => {
           ))}
         </div>
 
-        <Button className='background-gradient rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl p-[2px] shadow-royal-purple'>
+        <Button className='hidden lg:block background-gradient rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl p-[2px] shadow-royal-purple'>
           <div className='w-full h-full font-semibold bg-purple-900 rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl px-4 flex items-center justify-center'>
             <Link href="/auth/sign-in" >
               SIGN IN
             </Link> 
           </div>
         </Button>
+
+        <Sheet>
+          <SheetTrigger>
+            <Menu className='lg:hidden' />
+          </SheetTrigger>
+          <SheetContent className='w-full h-full flex flex-col items-center justify-center gap-y-4 bg-purple-900'>
+            {navItems.map((item, index) => (
+              <Link 
+                key={index} 
+                href={item.path}
+                className={cn(
+                  pathname === item.path && 'text-gradient font-bold'
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </SheetContent>
+        </Sheet>
       </nav>
     </header>
   )

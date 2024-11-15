@@ -4,6 +4,25 @@ import { ChartColumnIncreasing } from 'lucide-react';
 import { Headset } from 'lucide-react';
 import { ChartNoAxesCombined } from 'lucide-react';
 
+export const navItems = [
+  {
+    name: "HOME",
+    path: "/",
+  },
+  {
+    name: "ABOUT US",
+    path: "/about-us"
+  },
+  {
+    name: "OUR SERVICES",
+    path: "/our-services"
+  },
+  {
+    name: "PRICING",
+    path: "/pricing"
+  }
+]
+
 export const transformWithPurpleBoxData = [
   {
     title: "CRM Integration",

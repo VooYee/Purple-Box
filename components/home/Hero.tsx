@@ -15,7 +15,7 @@ const Hero = () => {
     <div className="wrapper mt-[120px] w-full text-center h-[500px] flex flex-col items-center justify-center gap-y-4 relative">
       {/* Animated Title */}
       <motion.h3
-        className="text-4xl font-bold font-gotham"
+        className="text-3xl lg:text-4xl font-bold font-gotham"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -25,12 +25,12 @@ const Hero = () => {
 
       {/* Animated Subtitle */}
       <motion.h5
-        className="text-xl"
+        className="lg:text-xl"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
       >
-        Unlock the power of AI with Purple-Box, the multichannel chatbot <br /> designed for e-commerce growth.
+        Unlock the power of AI with Purple-Box, the multichannel chatbot <br className='hidden lg:block' /> designed for e-commerce growth.
       </motion.h5>
 
       {/* Animated Image */}

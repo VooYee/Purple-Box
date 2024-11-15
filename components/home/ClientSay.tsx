@@ -54,7 +54,7 @@ const ClientSay = () => {
     >
       {/* Animated Section Title */}
       <motion.h5
-        className="font-gotham text-4xl font-bold text-white tracking-wide"
+        className="font-gotham text-3xl px-4 lg:text-4xl font-bold text-white tracking-wide text-center"
         initial="hidden"
         animate={animationControls}
         variants={{

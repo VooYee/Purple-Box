@@ -50,7 +50,7 @@ const FreeTrial = () => {
       
       {/* Animated Title */}
       <motion.h5
-        className="font-gotham text-4xl font-bold text-center"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-center"
         variants={buttonVariants}
       >
         Take the Next Step with <span className="text-gradient">Purple Box</span>
@@ -58,14 +58,14 @@ const FreeTrial = () => {
       
       {/* Animated Buttons */}
       <motion.div
-        className="flex items-center justify-center gap-x-4 font-gotham"
+        className="flex items-center flex-col md:flex-row justify-center gap-4 font-gotham"
         variants={containerVariants}
       >
         {/* Get Started Button */}
         <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={"default"}
-            className="px-6 py-3 text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-lg shadow-lg transition duration-300 hover:from-purple-600 hover:to-purple-800 transform"
+            className="min-w-[300px] px-6 py-3 text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-lg shadow-lg transition duration-300 hover:from-purple-600 hover:to-purple-800 transform"
           >
             Get Started
           </Button>
@@ -75,7 +75,7 @@ const FreeTrial = () => {
         <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={"outline"}
-            className="px-6 py-3 border border-purple-400 text-purple-400 rounded-lg transition duration-300 hover:bg-purple-400 hover:text-white transform"
+            className="min-w-[300px] px-6 py-3 border border-purple-400 text-purple-400 rounded-lg transition duration-300 hover:bg-purple-400 hover:text-white transform"
           >
             Schedule A Demo
           </Button>
@@ -85,7 +85,7 @@ const FreeTrial = () => {
         <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={"secondary"}
-            className="px-6 py-3 text-purple-500 bg-purple-100 rounded-lg transition duration-300 hover:bg-purple-200 transform"
+            className="min-w-[300px] px-6 py-3 text-purple-500 bg-purple-100 rounded-lg transition duration-300 hover:bg-purple-200 transform"
           >
             Learn More
           </Button>

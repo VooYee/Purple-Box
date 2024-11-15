@@ -52,7 +52,7 @@ const SeeInAction = () => {
     >
       {/* Animated Title */}
       <motion.h5
-        className="font-gotham text-4xl font-bold"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-center"
         variants={titleVariants}
       >
         See <span className="text-gradient">Purple-Box</span> in Action

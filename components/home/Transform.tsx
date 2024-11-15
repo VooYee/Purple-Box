@@ -49,7 +49,7 @@ const Transform = () => {
     >
       {/* Animated Title */}
       <motion.h5
-        className="font-gotham text-4xl font-bold"
+        className="font-gotham text-3xl lg:text-4xl font-bold"
         variants={cardVariants}
       >
         Transform <span className="text-gradient">Your E-Commerce</span> With Purple Box
@@ -57,7 +57,7 @@ const Transform = () => {
 
       {/* Animated List of Items */}
       <motion.ul
-        className="flex flex-wrap justify-center gap-8"
+        className="flex flex-wrap items-center justify-center gap-8 w-full"
         variants={containerVariants}
       >
         {transformWithPurpleBoxData.map((item, index) => {
@@ -66,14 +66,14 @@ const Transform = () => {
           return (
             <motion.li
               key={index}
-              className="max-w-[350px] rounded-[25px]"
+              className="w-full lg:max-w-[350px] rounded-[25px]"
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <GradientWrapper
-                classNameWrapper="max-w-[350px] rounded-[25px]"
-                classNameContent="flex flex-col rounded-[25px] items-center gap-y-4 p-4 bg-purple-"
+                classNameWrapper="w-full lg:max-w-[350px] rounded-[25px]"
+                classNameContent="w-full flex flex-col rounded-[25px] items-center gap-y-4 p-4 bg-purple-"
                 useShadow={true}
               >
                 <Icon className="w-8 h-8" />

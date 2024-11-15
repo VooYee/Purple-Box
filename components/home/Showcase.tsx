@@ -61,10 +61,10 @@ const Showcase = () => {
     >
       {/* Animated Text */}
       <motion.p
-        className="text-xl text-center"
+        className="lg:text-xl text-center"
         variants={imageVariants}
       >
-        AI-powered multichannel chatbot designed for e-commerce <br /> businesses to enhance customer acquisition and provide seamless 24/7 support.
+        AI-powered multichannel chatbot designed for e-commerce <br className='hidden lg:block' /> businesses to enhance customer acquisition and provide seamless 24/7 support.
       </motion.p>
 
       {/* Animated Product Showcase Image */}

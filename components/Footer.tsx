@@ -10,9 +10,9 @@ import PartnerLogo2 from '@/public/Purple-Box-Logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#1a0730] to-[#3c1361] text-white py-16 flex flex-col items-center">
+    <footer className="wrapper bg-gradient-to-b from-[#1a0730] to-[#3c1361] text-white py-16 flex flex-col items-center">
       <div className="w-full max-w-7xl">
-        <div className="w-full flex justify-between gap-y-8">
+        <div className="w-full flex flex-col md:flex-row justify-between gap-y-8">
           {/* Quick Links */}
           <div className="w-full">
             <h6 className="font-bold text-lg mb-4">Quick Links</h6>
