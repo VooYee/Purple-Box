@@ -1,33 +1,99 @@
+'use client'
+
 // Library Import
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // Asset Import
-import TempImg from '@/public/Purple-Box-Logo.png'
+import TempImg from '@/public/Purple-Box-Logo.png';
 
 // Icon Import
 import { FaLinkedin } from 'react-icons/fa';
 
 const TeamIntroduction = () => {
-  return (
-    <div className="wrapper space-y-6">
-        <h2 className="text-4xl font-bold text-center font-gotham">Meet Our Team</h2>
-        <div className="flex justify-center gap-8">
-          {[{ name: "John Doe", title: "CEO", bio: "Expert in AI development and e-commerce innovation." },
-            { name: "John Doe", title: "CEO", bio: "Expert in AI development and e-commerce innovation." },
-            { name: "John Doe", title: "CEO", bio: "Expert in AI development and e-commerce innovation." }
-          ].map((member, index) => (
-            <div key={index} className="text-center space-y-3 rounded-lg border-2 border-purple-500 bg-purple-700 p-4">
-              <Image src={TempImg} alt={member.name} className="rounded-full mx-auto" width={100} height={100} />
-              <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-purple-200">{member.title}</p>
-              <p className="text-sm">{member.bio}</p>
-              <a href="#" className="text-purple-400 mt-4 hover:text-purple-500"><FaLinkedin size={20} /></a>
-            </div>
-          ))}
-        </div>
-      </div>
-  )
-}
+  // Intersection Observer
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
-export default TeamIntroduction
+  // Framer Motion Animation Controls
+  const animationControls = useAnimation();
+
+  React.useEffect(() => {
+    if (inView) {
+      animationControls.start('visible');
+    }
+  }, [inView, animationControls]);
+
+  // Variants for animations
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, staggerChildren: 0.2 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  };
+
+  return (
+    <motion.div
+      ref={ref} // Ref untuk Intersection Observer
+      className="wrapper space-y-6"
+      initial="hidden"
+      animate={animationControls}
+      variants={containerVariants}
+    >
+      {/* Animated Title */}
+      <motion.h2
+        className="text-4xl font-bold text-center font-gotham"
+        variants={cardVariants}
+      >
+        Meet Our Team
+      </motion.h2>
+
+      {/* Animated Team Cards */}
+      <motion.div
+        className="flex justify-center gap-8"
+        variants={containerVariants}
+      >
+        {[
+          { name: 'John Doe', title: 'CEO', bio: 'Expert in AI development and e-commerce innovation.' },
+          { name: 'Jane Smith', title: 'CTO', bio: 'Specialist in scalable tech solutions and AI-driven systems.' },
+          { name: 'Alice Brown', title: 'COO', bio: 'Experienced in operational efficiency and business growth.' },
+        ].map((member, index) => (
+          <motion.div
+            key={index}
+            className="text-center space-y-3 rounded-lg border-2 border-purple-500 bg-purple-700 p-4"
+            variants={cardVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Image
+              src={TempImg}
+              alt={member.name}
+              className="rounded-full mx-auto"
+              width={100}
+              height={100}
+            />
+            <h3 className="text-xl font-semibold">{member.name}</h3>
+            <p className="text-purple-200">{member.title}</p>
+            <p className="text-sm">{member.bio}</p>
+            <a href="#" className="text-purple-400 mt-4 hover:text-purple-500">
+              <FaLinkedin size={20} />
+            </a>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default TeamIntroduction;
