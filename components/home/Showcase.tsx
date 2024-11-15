@@ -25,12 +25,12 @@ const Showcase = () => {
       <Image 
         src={RightInfo}
         alt="Right Info"
-        className="absolute translate-x-[250px] w-[250px] translate-y-[-10px]"
+        className="absolute translate-x-[250px] w-[250px] translate-y-[-10px] transition-all hover:scale-125"
       />
       <Image 
         src={LeftInfo}
         alt="Left Info"
-        className="absolute translate-x-[-250px] w-[250px] translate-y-[100px]"
+        className="absolute translate-x-[-250px] w-[250px] translate-y-[100px] transition-all hover:scale-125"
       />
     </div>
   )

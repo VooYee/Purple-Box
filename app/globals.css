@@ -251,7 +251,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-gradient-to-b from-Dark-Primary to-Dark-Indigo overflow-x-hidden;
+    @apply overflow-x-hidden;
   }
   .wrapper {
     @apply w-full max-w-7xl mx-auto p-4 md:p-6 lg:p-8 flex flex-col items-center 

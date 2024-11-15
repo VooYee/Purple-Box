@@ -1,5 +1,6 @@
 // Constants Imports
 import { whoWeServeData } from '@/lib/constants'
+import GradientWrapper from '../GradientWrapper'
 
 const WhoWeServe = () => {
   return (
@@ -8,10 +9,14 @@ const WhoWeServe = () => {
       <ul className="max-w-7xl w-full flex justify-between gap-8">
           {whoWeServeData.map((item, index) => {
             return (
-              <div key={index} className="p-4 border-white border-2 rounded-xl flex flex-col items-start gap-y-4 text-white">
-                <p>{item.profile}</p>
+              <GradientWrapper
+                key={index}
+                classNameContent='rounded-xl flex flex-col items-center gap-y-4 text-center p-6'
+                classNameWrapper='rounded-xl'
+              >
+                <p className='font-bold text-xl'>{item.profile}</p>
                 <p>{item.description}</p>
-              </div>
+              </GradientWrapper>
             )
           })}
         </ul>
