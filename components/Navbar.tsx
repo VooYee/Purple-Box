@@ -79,7 +79,7 @@ const Navbar = () => {
         </div>
 
         <Button className='background-gradient rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl p-[2px] shadow-royal-purple'>
-          <div className='w-full h-full font-semibold bg-Dark-Primary rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl px-4 flex items-center justify-center'>
+          <div className='w-full h-full font-semibold bg-purple-900 rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl px-4 flex items-center justify-center'>
             <Link href="/auth/sign-in" >
               SIGN IN
             </Link> 
