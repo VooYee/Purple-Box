@@ -46,7 +46,7 @@ const Intro = () => {
     >
       {/* Animated Title */}
       <motion.h1
-        className="text-4xl font-bold font-gotham"
+        className="text-3xl lg:text-4xl font-bold font-gotham"
         variants={textVariants}
       >
         Find the <span className="text-gradient">Perfect Plan</span> for Your Business
@@ -54,7 +54,7 @@ const Intro = () => {
 
       {/* Animated Description */}
       <motion.p
-        className="max-w-3xl mx-auto text-lg text-purple-200"
+        className="max-w-3xl mx-auto text-md lg:text-lg text-purple-200"
         variants={textVariants}
       >
         At Purple-Box, we offer a range of pricing plans tailored to fit the needs of businesses of all sizes. Whether you're just getting started or looking to scale, we have the right plan for you. Explore our plans and find the perfect match for your business needs.

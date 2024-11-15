@@ -48,7 +48,7 @@ const AddOns = () => {
       >
         Enhance Your Plan with Add-Ons
       </motion.h2>
-      <motion.div className="flex justify-between w-full gap-4" variants={containerVariants}>
+      <motion.div className="flex flex-col md:flex-row justify-between w-full gap-4" variants={containerVariants}>
         {[
           { title: 'WhatsApp Integration', price: '€15/month' },
           { title: 'Email Integration', price: '€10/month' },

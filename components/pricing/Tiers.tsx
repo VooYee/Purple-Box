@@ -49,7 +49,7 @@ const Tiers = () => {
     >
       {/* Animated Title */}
       <motion.h2
-        className="text-3xl font-bold text-center font-gotham"
+        className="text-2xl lg:text-3xl font-bold text-center font-gotham"
         variants={cardVariants}
       >
         Choose Your Plan
