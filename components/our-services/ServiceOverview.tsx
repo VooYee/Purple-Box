@@ -48,7 +48,7 @@ const ServiceOverview = () => {
   return (
     <motion.div
       ref={ref} // Ref untuk Intersection Observer
-      className="wrapper text-center mt-[100px] flex flex-row justify-start items-start gap-x-12"
+      className="wrapper text-center mt-[100px] flex flex-col items-center lg:flex-row justify-start lg:items-start gap-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
@@ -68,11 +68,11 @@ const ServiceOverview = () => {
       </motion.div>
 
       {/* Animated Text */}
-      <motion.div className="text-start space-y-4" variants={textVariants}>
-        <h2 className="text-4xl font-bold font-gotham">
+      <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
+        <h2 className="text-2xl lg:text-3xl font-bold font-gotham">
           Empower Your E-Commerce with AI-Driven Solutions
         </h2>
-        <p className="max-w-3xl text-lg text-purple-200">
+        <p className="max-w-3xl text-md lg:text-lg text-purple-200">
           Purple-Box combines cutting-edge AI technology with a deep understanding of e-commerce to provide smart automation solutions that help businesses grow. From lead generation to customer support, our comprehensive suite of services ensures your business stays ahead of the competition.
         </p>
       </motion.div>

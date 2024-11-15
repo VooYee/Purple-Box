@@ -48,7 +48,7 @@ const CRMIntegration = () => {
   return (
     <motion.div
       ref={ref} // Ref untuk Intersection Observer
-      className="wrapper flex flex-row justify-start items-start gap-x-12"
+      className="wrapper flex flex-col items-center lg:flex-row justify-start lg:items-start gap-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
@@ -68,8 +68,8 @@ const CRMIntegration = () => {
       </motion.div>
 
       {/* Animated Text */}
-      <motion.div className="text-start space-y-4" variants={textVariants}>
-        <h3 className="text-3xl font-bold font-gotham">
+      <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
+        <h3 className="text-2xl lg:text-3xl font-bold font-gotham">
           CRM Integration: Maximize Your Customer Relationships
         </h3>
         <p className="max-w-3xl">

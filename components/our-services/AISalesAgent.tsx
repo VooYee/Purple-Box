@@ -46,7 +46,7 @@ const AISalesAgent = () => {
     >
       {/* Animated Title */}
       <motion.h3
-        className="font-gotham text-3xl font-bold text-center"
+        className="font-gotham text-2xl lg:text-3xl font-bold text-center"
         variants={cardVariants}
       >
         AI Sales Agent: Drive More Sales, Effortlessly

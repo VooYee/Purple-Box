@@ -62,7 +62,7 @@ const CallToAction = () => {
 
       {/* Animated Buttons */}
       <motion.div
-        className="flex justify-center space-x-4"
+        className="flex flex-col md:flex-row items-center justify-center gap-4"
         variants={containerVariants}
       >
         <motion.a

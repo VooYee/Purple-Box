@@ -48,7 +48,7 @@ const DataAndAnalytics = () => {
   return (
     <motion.div
       ref={ref} // Ref untuk Intersection Observer
-      className="space-y-6 wrapper flex flex-row justify-start items-start gap-x-12"
+      className="space-y-6 wrapper flex flex-col items-center lg:flex-row justify-start lg:items-start gap-x-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
@@ -68,8 +68,8 @@ const DataAndAnalytics = () => {
       </motion.div>
 
       {/* Animated Text */}
-      <motion.div className="text-start space-y-4" variants={textVariants}>
-        <h3 className="font-gotham text-3xl font-bold text-center">
+      <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
+        <h3 className="font-gotham text-2xl lg:text-3xl font-bold text-center">
           Data & Analytics: Unlock Actionable Insights
         </h3>
         <p className="max-w-3xl">

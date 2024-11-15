@@ -46,7 +46,7 @@ const AIChatBots = () => {
     >
       {/* Animated Title */}
       <motion.h3
-        className="text-3xl font-gotham font-bold text-center"
+        className="text-2xl lg:text-3xl font-gotham font-bold text-center"
         variants={cardVariants}
       >
         AI Chatbots: 24/7 Customer Support that Never Sleeps
