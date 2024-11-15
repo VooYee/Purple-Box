@@ -17,7 +17,7 @@ const Transform = () => {
             <GradientWrapper 
               key={index}
               classNameWrapper='max-w-[350px] rounded-[25px]'
-              classNameContent='flex flex-col rounded-[25px] items-center gap-y-4 p-4'
+              classNameContent='flex flex-col rounded-[25px] items-center gap-y-4 p-4 bg-purple-900'
               useShadow={true}
             >
               <Icon className="w-8 h-8" />

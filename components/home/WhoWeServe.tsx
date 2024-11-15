@@ -11,7 +11,7 @@ const WhoWeServe = () => {
             return (
               <GradientWrapper
                 key={index}
-                classNameContent='rounded-xl flex flex-col items-center gap-y-4 text-center p-6'
+                classNameContent='rounded-xl flex flex-col items-center gap-y-4 text-center p-6 bg-purple-900'
                 classNameWrapper='rounded-xl'
                 useShadow={true}
               >

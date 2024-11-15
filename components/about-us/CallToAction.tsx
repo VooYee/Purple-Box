@@ -2,7 +2,7 @@ import React from 'react'
 
 const CallToAction = () => {
   return (
-    <div className="text-center space-y-4 bg-[#3c1361] py-8 rounded-lg p-8 wrapper shadow-xl">
+    <div className="text-center space-y-4 bg-[#3c1361] rounded-lg wrapper shadow-xl">
       <h2 className="text-3xl font-bold font-gotham">Ready to Transform Your Business?</h2>
       <p>Join the growing list of businesses transforming their e-commerce operations with Purple-Box.</p>
       <div className="flex justify-center space-x-4">
