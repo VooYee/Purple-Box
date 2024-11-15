@@ -18,7 +18,7 @@ const CoreValues = () => {
           <GradientWrapper 
             key={index}
             classNameWrapper='rounded-xl'
-            classNameContent='rounded-xl w-full flex flex-col items-center justify-center p-6 space-y-4 text-center'
+            classNameContent='rounded-xl w-full flex flex-col items-center justify-center p-6 space-y-4 text-center bg-purple-900'
             useShadow={true}
           >
             <h3 className="text-2xl font-semibold">{value.title}</h3>
