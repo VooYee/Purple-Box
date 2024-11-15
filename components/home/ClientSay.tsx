@@ -1,24 +1,87 @@
+'use client'
+
 // Library Import
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // Asset Imports
-import Dummy from '@/public/Purple-Box-Logo.png'
+import Dummy from '@/public/Purple-Box-Logo.png';
 
 // Constants Imports
-import { customerTestimonialsData } from '@/lib/constants'
+import { customerTestimonialsData } from '@/lib/constants';
 
 const ClientSay = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2,
+  });
+
+  // Framer Motion animation controls
+  const animationControls = useAnimation();
+
+  React.useEffect(() => {
+    if (inView) {
+      animationControls.start('visible');
+    }
+  }, [inView, animationControls]);
+
+  // Variants for parent container
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+        staggerChildren: 0.2, // Delay between each child animation
+      },
+    },
+  };
+
+  // Variants for child elements (cards)
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
   return (
-    <div className="flex flex-col items-center gap-y-12 py-24 w-full h-full bg-[#3c1361] shadow-lg">
-      <h5 className="font-gotham text-4xl font-bold text-white tracking-wide">
+    <div
+      ref={ref} // Assign ref to track visibility
+      className="flex flex-col items-center gap-y-12 py-24 w-full h-full bg-[#3c1361] shadow-lg"
+    >
+      {/* Animated Section Title */}
+      <motion.h5
+        className="font-gotham text-4xl font-bold text-white tracking-wide"
+        initial="hidden"
+        animate={animationControls}
+        variants={{
+          hidden: { opacity: 0, y: -30 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
         What Our Clients Say
-      </h5>
-      <ul className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      </motion.h5>
+
+      {/* Animated Cards Container */}
+      <motion.ul
+        className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4"
+        variants={containerVariants}
+        initial="hidden"
+        animate={animationControls}
+      >
         {customerTestimonialsData.map((item, index) => (
-          <div
+          <motion.li
             key={index}
-            className="p-6 border border-purple-700 rounded-xl bg-[#2e0844] shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-start gap-y-6"
+            className="p-6 border border-purple-700 rounded-xl bg-[#2e0844] shadow-lg flex flex-col items-start gap-y-6"
+            variants={cardVariants}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.3 },
+            }}
           >
             <div className="flex gap-x-3 items-center">
               <Image
@@ -36,11 +99,11 @@ const ClientSay = () => {
             <p className="text-purple-200 text-sm italic leading-relaxed">
               &quot;{item.quote}&quot;
             </p>
-          </div>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </div>
-  )
-}
+  );
+};
 
-export default ClientSay
+export default ClientSay;
