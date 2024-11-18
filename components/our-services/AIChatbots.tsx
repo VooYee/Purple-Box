@@ -6,13 +6,11 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const AIChatBots = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -21,7 +19,6 @@ const AIChatBots = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -38,29 +35,27 @@ const AIChatBots = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="wrapper space-y-6"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
+ 
       <motion.h3
-        className="text-2xl lg:text-3xl font-gotham font-bold text-center"
+        className="text-2xl lg:text-3xl font-gotham font-bold text-center text-white"
         variants={cardVariants}
       >
         AI Chatbots: 24/7 Customer Support that Never Sleeps
       </motion.h3>
 
-      {/* Animated Description */}
       <motion.p
-        className="max-w-3xl mx-auto text-center"
+        className="max-w-3xl mx-auto text-center text-white"
         variants={cardVariants}
       >
         Provide exceptional customer service around the clock with our AI chatbots. Manage inquiries, resolve issues, and guide purchases seamlessly.
       </motion.p>
 
-      {/* Animated Features */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-6"
         variants={containerVariants}
@@ -77,7 +72,7 @@ const AIChatBots = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <h4 className="text-xl font-semibold">{point.title}</h4>
+            <h4 className="text-xl font-semibold text-white">{point.title}</h4>
             <p className="text-sm text-purple-200">{point.desc}</p>
           </motion.div>
         ))}

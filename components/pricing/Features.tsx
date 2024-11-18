@@ -6,13 +6,11 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Features = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -21,7 +19,6 @@ const Features = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -38,21 +35,19 @@ const Features = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref}
       className="wrapper space-y-8"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
       <motion.h2
-        className="text-2xl lg:text-3xl font-bold text-center font-gotham"
+        className="text-2xl lg:text-3xl font-bold text-center font-gotham text-white"
         variants={rowVariants}
       >
         Compare Our Plans
       </motion.h2>
 
-      {/* Animated Table */}
       <motion.div
         className="overflow-x-auto w-full"
         variants={containerVariants}
@@ -61,9 +56,9 @@ const Features = () => {
           <thead>
             <tr>
               <th className="p-4 border-b border-purple-700">Features</th>
-              <th className="p-4 border-b border-purple-700">Freemium</th>
-              <th className="p-4 border-b border-purple-700">ChatBot Plan</th>
-              <th className="p-4 border-b border-purple-700">Premium</th>
+              <th className="p-4 border-b border-purple-700">Wordpress</th>
+              <th className="p-4 border-b border-purple-700">WooCommerce</th>
+              <th className="p-4 border-b border-purple-700">Shopify</th>
             </tr>
           </thead>
           <tbody>
@@ -71,19 +66,22 @@ const Features = () => {
               ['AI Sales Agent', 'Limited', 'Advanced', 'Full Access'],
               ['CRM Integration', '-', 'Enhanced', 'Advanced'],
               ['Marketing Automation', 'Email Only', 'Multi-Channel', 'WhatsApp & More'],
-              ['AI Chatbots', '50 Queries/Month', 'Unlimited', '24/7 Advanced'],
+              ['AI Chatbots', 'Full Access', 'Full Access', 'Full Access'],
               ['Data & Analytics', 'Basic', 'Advanced', 'Predictive Insights'],
               ['Customer Support', '-', 'Basic', 'Priority'],
-            ].map(([feature, freemium, basic, premium], index) => (
+              ['PDF Document Integration', 'Available', 'Available', 'Available'],
+              ['Database Integration', '-', 'Available', 'Available'],
+              ['Customer Database Integration', 'Basic', 'Advanced', 'Full Access'],
+            ].map(([feature, wordpress, woocommerce, shopify], index) => (
               <motion.tr
                 key={index}
                 className="border-b border-purple-700"
                 variants={rowVariants}
               >
                 <td className="p-4">{feature}</td>
-                <td className="p-4 text-start">{freemium}</td>
-                <td className="p-4 text-start">{basic}</td>
-                <td className="p-4 text-start">{premium}</td>
+                <td className="p-4 text-start">{wordpress}</td>
+                <td className="p-4 text-start">{woocommerce}</td>
+                <td className="p-4 text-start">{shopify}</td>
               </motion.tr>
             ))}
           </tbody>

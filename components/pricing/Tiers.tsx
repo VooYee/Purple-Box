@@ -9,13 +9,11 @@ import { useInView } from 'react-intersection-observer';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const Tiers = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -24,7 +22,6 @@ const Tiers = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -41,120 +38,133 @@ const Tiers = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref}
       className="wrapper space-y-8"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
       <motion.h2
-        className="text-2xl lg:text-3xl font-bold text-center font-gotham"
+        className="text-2xl lg:text-3xl font-bold text-center font-gotham text-white"
         variants={cardVariants}
       >
-        Choose Your Plan
+        Choose Your Platform
       </motion.h2>
 
-      {/* Animated Plans */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-8"
         variants={containerVariants}
       >
-        {/* Freemium Plan */}
+        {/* WordPress Plan */}
         <motion.div
           className="p-6 border border-purple-700 rounded-lg bg-[#2e0844] text-center space-y-4"
           variants={cardVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <h3 className="text-xl font-semibold font-gotham">Freemium</h3>
-          <p className="text-4xl font-bold">Free</p>
+          <h3 className="text-xl font-semibold font-gotham">WordPress</h3>
+          {/* <p className="text-4xl font-bold">Free</p> */}
           <p className="text-purple-200">
-            Explore our core features with limited access. Ideal for businesses wanting to try Purple-Box before committing.
+            Perfect for bloggers and personal projects. Easily create a stunning website with basic WordPress features.
           </p>
           <ul className="space-y-2">
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Limited AI Sales Agent
+              <FaCheckCircle className="inline text-purple-400" /> Basic Themes
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Limited Marketing Automation
+              <FaCheckCircle className="inline text-purple-400" /> Core Plugins
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Basic AI Chatbots
+              <FaCheckCircle className="inline text-purple-400" /> WordPress Hosting
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Basic Data & Analytics
+              <FaCheckCircle className="inline text-purple-400" /> Basic Analytics
             </li>
           </ul>
           <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
-            Start Free Trial
+            Choose Wordpress
           </button>
         </motion.div>
 
-        {/* Basic Plan */}
+        {/* WooCommerce Plan */}
         <motion.div
           className="p-6 border border-purple-700 rounded-lg bg-[#3c1361] text-center space-y-4"
           variants={cardVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <h3 className="text-xl font-semibold font-gotham">ChatBot Plan</h3>
-          <p className="text-4xl font-bold">€29.99/month</p>
+          <h3 className="text-xl font-semibold font-gotham">WooCommerce</h3>
+          {/* <p className="text-4xl font-bold">€29.99/month</p> */}
           <p className="text-purple-200">
-            Unlock advanced features designed to enhance e-commerce operations for small to medium-sized businesses.
+            A powerful solution for eCommerce stores built on WordPress. Fully customizable and perfect for medium-sized businesses.
           </p>
           <ul className="space-y-2">
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Full AI Sales Agent
+              <FaCheckCircle className="inline text-purple-400" /> Advanced Plugins
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Enhanced CRM Integration
+              <FaCheckCircle className="inline text-purple-400" /> Premium Themes
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Advanced AI Chatbots
+              <FaCheckCircle className="inline text-purple-400" /> Product Management
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Advanced Data & Analytics
+              <FaCheckCircle className="inline text-purple-400" /> Payment Integrations
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Basic Customer Support
+              <FaCheckCircle className="inline text-purple-400" /> Email Campaigns
             </li>
           </ul>
           <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
-            Choose Basic
+            Choose WooCommerce
           </button>
         </motion.div>
 
-        {/* Premium Plan */}
+        {/* Shopify Plan */}
         <motion.div
           className="p-6 border border-purple-700 rounded-lg bg-[#2e0844] text-center space-y-4"
           variants={cardVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <h3 className="text-xl font-semibold font-gotham">All-in-One Premium Bundle</h3>
-          <p className="text-4xl font-bold">€59.90/month</p>
+          <h3 className="text-xl font-semibold font-gotham">Shopify</h3>
+          {/* <p className="text-4xl font-bold">€59.90/month</p> */}
           <p className="text-purple-200">
-            Get the most out of Purple-Box with our All-in-One Premium Bundle. Enjoy full integration capabilities, advanced analytics, and priority support—all at a great value.
+            The complete solution for professional eCommerce. Manage your online store, track orders, and enjoy premium support.
           </p>
           <ul className="space-y-2">
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> WhatsApp Integration
+              <FaCheckCircle className="inline text-purple-400" /> Shopify Store Setup
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Email Integration
+              <FaCheckCircle className="inline text-purple-400" /> Advanced Analytics
             </li>
             <li>
-              <FaCheckCircle className="inline text-purple-400" /> Analytic CRM
+              <FaCheckCircle className="inline text-purple-400" /> Multi-Channel Selling
+            </li>
+            <li>
+              <FaCheckCircle className="inline text-purple-400" /> Full CRM Integration
             </li>
             <li>
               <FaCheckCircle className="inline text-purple-400" /> Priority Support
             </li>
           </ul>
           <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
-            Upgrade to Premium Bundle
+            Choose Shopify
           </button>
         </motion.div>
+      </motion.div>
+
+      {/* Contact Us Button */}
+      <motion.div
+        className="text-center mt-8"
+        variants={cardVariants}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <button className="bg-purple-600 min-w-[350px] font-gotham text-white px-6 py-3 rounded-lg hover:bg-purple-700 font-bold">
+          Contact Us
+        </button>
       </motion.div>
     </motion.div>
   );

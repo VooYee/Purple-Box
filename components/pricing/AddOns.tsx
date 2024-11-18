@@ -41,7 +41,7 @@ const AddOns = () => {
       variants={containerVariants}
     >
       <motion.h2
-        className="text-3xl font-gotham font-bold text-center"
+        className="text-3xl font-gotham font-bold text-center text-white"
         variants={cardVariants}
       >
         Enhance Your Plan with Add-Ons

@@ -6,13 +6,11 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Intro = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -21,7 +19,6 @@ const Intro = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -38,21 +35,20 @@ const Intro = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="text-center space-y-6 mt-[80px] wrapper"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
+
       <motion.h1
-        className="text-3xl lg:text-4xl font-bold font-gotham"
+        className="text-3xl lg:text-4xl font-bold font-gotham text-white"
         variants={textVariants}
       >
         Find the <span className="text-gradient">Perfect Plan</span> for Your Business
       </motion.h1>
 
-      {/* Animated Description */}
       <motion.p
         className="max-w-3xl mx-auto text-md lg:text-lg text-purple-200"
         variants={textVariants}

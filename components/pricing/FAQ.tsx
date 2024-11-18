@@ -17,7 +17,7 @@ const FAQ = () => {
 
   return (
     <section className="wrapper space-y-8">
-      <h2 className="text-3xl font-bold text-center">Frequently Asked Questions</h2>
+      <h2 className="text-3xl font-bold text-center text-white font-gotham">Frequently Asked Questions</h2>
       <div className="w-full space-y-4">
         {[
           [

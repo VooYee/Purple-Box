@@ -10,13 +10,11 @@ import { useInView } from 'react-intersection-observer';
 import ServiceOverviewImg from '@/public/our-services/OurService1.png';
 
 const ServiceOverview = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -25,7 +23,6 @@ const ServiceOverview = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -47,13 +44,13 @@ const ServiceOverview = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="wrapper text-center mt-[100px] flex flex-col items-center lg:flex-row justify-start lg:items-start gap-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Image */}
+
       <motion.div
         className="relative h-[250px] w-[250px]"
         variants={imageVariants}
@@ -67,9 +64,9 @@ const ServiceOverview = () => {
         />
       </motion.div>
 
-      {/* Animated Text */}
+
       <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
-        <h2 className="text-2xl lg:text-3xl font-bold font-gotham">
+        <h2 className="text-2xl lg:text-3xl font-bold font-gotham text-white">
           Empower Your E-Commerce with AI-Driven Solutions
         </h2>
         <p className="max-w-3xl text-md lg:text-lg text-purple-200">

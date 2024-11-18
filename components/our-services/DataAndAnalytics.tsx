@@ -10,13 +10,11 @@ import { useInView } from 'react-intersection-observer';
 import OurService3 from '@/public/our-services/OurService3.png';
 
 const DataAndAnalytics = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -25,7 +23,6 @@ const DataAndAnalytics = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -47,13 +44,13 @@ const DataAndAnalytics = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref}
       className="space-y-6 wrapper flex flex-col items-center lg:flex-row justify-start lg:items-start gap-x-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Image */}
+
       <motion.div
         className="relative h-[250px] w-[250px]"
         variants={imageVariants}
@@ -67,12 +64,12 @@ const DataAndAnalytics = () => {
         />
       </motion.div>
 
-      {/* Animated Text */}
-      <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
-        <h3 className="font-gotham text-2xl lg:text-3xl font-bold text-center">
+
+      <motion.div className="text-start lg:text-start space-y-4" variants={textVariants}>
+        <h3 className="font-gotham text-2xl lg:text-3xl font-bold text-start text-white">
           Data & Analytics: Unlock Actionable Insights
         </h3>
-        <p className="max-w-3xl">
+        <p className="max-w-3xl text-white">
           Harness the power of real-time data analytics to gain deep insights into your operations and make informed decisions.
         </p>
       </motion.div>

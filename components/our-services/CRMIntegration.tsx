@@ -10,13 +10,11 @@ import { useInView } from 'react-intersection-observer';
 import OurService2 from '@/public/our-services/OurService2.png';
 
 const CRMIntegration = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -25,7 +23,6 @@ const CRMIntegration = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -47,13 +44,13 @@ const CRMIntegration = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="wrapper flex flex-col items-center lg:flex-row justify-start lg:items-start gap-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Image */}
+
       <motion.div
         className="relative h-[250px] w-[250px]"
         variants={imageVariants}
@@ -67,12 +64,12 @@ const CRMIntegration = () => {
         />
       </motion.div>
 
-      {/* Animated Text */}
+
       <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
-        <h3 className="text-2xl lg:text-3xl font-bold font-gotham">
+        <h3 className="text-2xl lg:text-3xl font-bold font-gotham text-white">
           CRM Integration: Maximize Your Customer Relationships
         </h3>
-        <p className="max-w-3xl">
+        <p className="max-w-3xl text-white">
           Integrate Purple-Box seamlessly with your existing CRM systems to improve data management and deliver personalized marketing campaigns.
         </p>
       </motion.div>
