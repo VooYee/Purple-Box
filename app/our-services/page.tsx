@@ -7,7 +7,7 @@ import AISalesAgent from '@/components/our-services/AISalesAgent';
 import CRMIntegration from '@/components/our-services/CRMIntegration';
 import MarketingAutomation from '@/components/our-services/MarketingAutomation';
 import DataAndAnalytics from '@/components/our-services/DataAndAnalytics';
-import CallToAction from '@/components/about-us/CallToAction';
+import CallToAction from '@/components/CallToAction';
 import AIChatBots from '@/components/our-services/AIChatbots';
 
 const OurServices = () => {

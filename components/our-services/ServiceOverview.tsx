@@ -67,7 +67,7 @@ const ServiceOverview = () => {
 
       <motion.div className="text-center lg:text-start space-y-4" variants={textVariants}>
         <h2 className="text-2xl lg:text-3xl font-bold font-gotham text-white">
-          Empower Your E-Commerce with AI-Driven Solutions
+          Empower Your <span className='text-gradient'>E-Commerce</span> with <span className='text-gradient'>AI-Driven Solutions</span>
         </h2>
         <p className="max-w-3xl text-md lg:text-lg text-purple-200">
           Purple-Box combines cutting-edge AI technology with a deep understanding of e-commerce to provide smart automation solutions that help businesses grow. From lead generation to customer support, our comprehensive suite of services ensures your business stays ahead of the competition.

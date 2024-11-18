@@ -7,7 +7,7 @@ import OurStory from '@/components/about-us/OurStory';
 import CoreValues from '@/components/about-us/CoreValues';
 import TeamIntroduction from '@/components/about-us/TeamIntroduction';
 import MediaAndAwards from '@/components/about-us/MediaAndAwards';
-import CallToAction from '@/components/about-us/CallToAction';
+import CallToAction from '@/components/CallToAction';
 
 const AboutUs = () => {
   return (

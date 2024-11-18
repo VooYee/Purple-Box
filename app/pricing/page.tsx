@@ -11,7 +11,7 @@ import Tiers from '@/components/pricing/Tiers';
 import Features from '@/components/pricing/Features';
 import AddOns from '@/components/pricing/AddOns';
 import FAQ from '@/components/pricing/FAQ';
-import CallToAction from '@/components/about-us/CallToAction';
+import CallToAction from '@/components/CallToAction';
 
 const Pricing = () => {
   return (
