@@ -7,23 +7,19 @@ import { Button } from "../ui/button";
 import { useEffect } from "react";
 
 const FreeTrial = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
-    triggerOnce: true, // Animasi hanya berjalan sekali
-    threshold: 0.2, // Mulai animasi ketika 20% dari section terlihat
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
-  // Start animation when inView is true
   useEffect(() => {
     if (inView) {
       animationControls.start("visible");
     }
   }, [inView, animationControls]);
 
-  // Variants for animation
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
@@ -36,32 +32,27 @@ const FreeTrial = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="wrapper w-full flex flex-col items-center gap-y-12 my-12"
       variants={containerVariants}
       initial="hidden"
       animate={animationControls}
     >
-      {/* Animated Divider */}
       <motion.div
         className="w-[250px] bg-purple-500 h-[2px] rounded-full shadow-royal-purple"
         variants={buttonVariants}
       />
-      
-      {/* Animated Title */}
       <motion.h5
-        className="font-gotham text-3xl lg:text-4xl font-bold text-center"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-center text-white"
         variants={buttonVariants}
       >
         Take the Next Step with <span className="text-gradient">Purple Box</span>
       </motion.h5>
       
-      {/* Animated Buttons */}
       <motion.div
         className="flex items-center flex-col md:flex-row justify-center gap-4 font-gotham"
         variants={containerVariants}
       >
-        {/* Get Started Button */}
         <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={"default"}
@@ -72,7 +63,6 @@ const FreeTrial = () => {
           </Button>
         </motion.div>
 
-        {/* Schedule a Demo Button */}
         <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={"outline"}
@@ -83,7 +73,6 @@ const FreeTrial = () => {
           </Button>
         </motion.div>
 
-        {/* Learn More Button */}
         <motion.div variants={buttonVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             variant={"secondary"}

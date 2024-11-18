@@ -58,7 +58,7 @@ const Navbar = () => {
             height={48}
             width={48}
           />
-          <h1 className='text-xl'>Purple Box</h1>
+          <h1 className='text-xl font-bold text-white'>Purple Box</h1>
         </Link>
 
         <div className='space-x-12 hidden lg:block'> 
@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
 
         <Button className='hidden lg:block background-gradient rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl p-[2px] shadow-royal-purple'>
-          <div className='w-full h-full font-semibold bg-purple-900 rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl px-4 flex items-center justify-center'>
+          <div className='w-full h-full font-medium bg-purple-900 rounded-tl-sm rounded-br-sm rounded-tr-2xl rounded-bl-2xl px-4 flex items-center justify-center text-white'>
             <Link href="/auth/sign-in" >
               SIGN IN
             </Link> 
@@ -93,6 +93,7 @@ const Navbar = () => {
                 key={index} 
                 href={item.path}
                 className={cn(
+                  'font-medium text-white',
                   pathname === item.path && 'text-gradient font-bold'
                 )}
               >

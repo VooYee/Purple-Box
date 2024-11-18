@@ -10,13 +10,11 @@ import { useInView } from 'react-intersection-observer';
 import TempImg from '@/public/Purple-Box-Logo.png';
 
 const OurStory = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -25,7 +23,6 @@ const OurStory = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -47,28 +44,28 @@ const OurStory = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
-      className="wrapper text-center space-y-6"
+      ref={ref} 
+      className="wrapper text-center space-y-0"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
+
       <motion.h2
-        className="text-3xl lg:text-4xl font-gotham font-bold text-center"
+        className="text-3xl lg:text-4xl font-gotham font-bold text-center text-white"
         variants={textVariants}
       >
         Our <span className="text-gradient">Story</span>
       </motion.h2>
 
-      {/* Animated Content */}
-      <div className="space-y-4">
+
+      <div>
         <motion.div
           className="w-full flex flex-col md:flex-row justify-between gap-x-12 items-center"
           variants={containerVariants}
         >
           <motion.p
-            className="max-w-2xl text-center md:text-start"
+            className="max-w-2xl text-center md:text-start text-white"
             variants={textVariants}
           >
             Purple-Box was born out of a desire to simplify and enhance e-commerce operations for businesses of all sizes. Our founders, a group of passionate AI developers and e-commerce veterans, recognized a common challenge: the need for smart, automated solutions to handle customer acquisition and support in a digital-first world.
@@ -77,8 +74,8 @@ const OurStory = () => {
             <Image
               src={TempImg}
               alt="Purple Box Logo"
-              width={250}
-              height={250}
+              width={175}
+              height={175}
               className="rounded-full"
             />
           </motion.div>
@@ -92,8 +89,8 @@ const OurStory = () => {
             <Image
               src={TempImg}
               alt="Purple Box Logo"
-              width={250}
-              height={250}
+              width={175}
+              height={175}
               className="rounded-full"
             />
           </motion.div>

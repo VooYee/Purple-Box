@@ -10,13 +10,11 @@ import { whoWeServeData } from '@/lib/constants';
 import GradientWrapper from '../GradientWrapper';
 
 const WhoWeServe = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -25,7 +23,6 @@ const WhoWeServe = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -42,21 +39,20 @@ const WhoWeServe = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="flex flex-col items-center gap-y-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
+
       <motion.h5
-        className="font-gotham text-3xl lg:text-4xl font-bold text-gradient"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-gradient text-white"
         variants={cardVariants}
       >
         Who We Serve
       </motion.h5>
 
-      {/* Animated List of Profiles */}
       <motion.ul
         className="max-w-7xl w-full flex flex-col lg:flex-row justify-between gap-8"
         variants={containerVariants}
@@ -74,8 +70,8 @@ const WhoWeServe = () => {
               classNameWrapper="rounded-xl"
               useShadow={true}
             >
-              <p className="font-bold text-xl">{item.profile}</p>
-              <p>{item.description}</p>
+              <p className="font-bold text-xl text-white">{item.profile}</p>
+              <p className='text-white'>{item.description}</p>
             </GradientWrapper>
           </motion.li>
         ))}

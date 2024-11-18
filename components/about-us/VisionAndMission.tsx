@@ -42,21 +42,19 @@ const VisionAndMission = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref}
       className="wrapper mt-[120px] text-center space-y-8"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
       <motion.h2
-        className="text-3xl lg:text-4xl font-bold font-gotham"
+        className="text-3xl lg:text-4xl font-bold font-gotham text-white"
         variants={textVariants}
       >
-        Our Vision and Mission
+        Our <span className='text-gradient'>Vision</span> and <span className='text-gradient'>Mission</span>
       </motion.h2>
 
-      {/* Animated Vision Statement */}
       <motion.div
         className="shadow-royal-purple"
         variants={textVariants}
@@ -66,7 +64,6 @@ const VisionAndMission = () => {
         </p>
       </motion.div>
 
-      {/* Animated Mission Section */}
       <motion.div
         className="w-full flex flex-col gap-y-4 items-center"
         variants={containerVariants}
@@ -78,7 +75,6 @@ const VisionAndMission = () => {
           Our mission is to enable small to medium-sized e-commerce businesses to optimize client acquisition and management using AI technology. We aim to enhance operational efficiency, drive sustainable growth, and ensure exceptional customer support experiences.
         </motion.p>
 
-        {/* Animated Divider */}
         <motion.div
           className="w-[250px] bg-white h-[1px] rounded-full"
           variants={dividerVariants}

@@ -10,23 +10,19 @@ import { useInView } from 'react-intersection-observer';
 import RobotPad from "@/public/home/RobotPad.png";
 
 const SeeInAction = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
-    triggerOnce: true, // Animasi hanya berjalan sekali
-    threshold: 0.2, // Mulai animasi ketika 20% dari section terlihat
+    triggerOnce: true, 
+    threshold: 0.2, 
   });
 
-  // Framer Motion Animation Controls
   const animationControls = useAnimation();
 
-  // Start animation when inView is true
   React.useEffect(() => {
     if (inView) {
       animationControls.start('visible');
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut', staggerChildren: 0.2 } },
@@ -44,21 +40,19 @@ const SeeInAction = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="flex flex-col items-center gap-y-12"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
       <motion.h5
-        className="font-gotham text-3xl lg:text-4xl font-bold text-center"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-center text-white"
         variants={titleVariants}
       >
         See <span className="text-gradient">Purple-Box</span> in Action
       </motion.h5>
 
-      {/* Animated Image */}
       <motion.div variants={imageVariants}>
         <Image 
           src={RobotPad}

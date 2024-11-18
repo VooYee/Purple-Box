@@ -15,9 +15,9 @@ export default function Home() {
       <Transform />
       <FreeTrial />
       <ClientSay />
-      <SeeInAction />
+      {/* <SeeInAction /> */}
       <WhoWeServe />
-      <div className="mb-20" />
+      <div className="mb-10" />
     </div>
   );
 }

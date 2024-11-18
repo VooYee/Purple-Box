@@ -98,22 +98,27 @@ export const whoWeServeData = [
 
 export const coreValuesData = [
   {
-      "title": "Efficient",
-      "description": "We believe in delivering solutions that maximize productivity and reduce overhead for businesses, allowing them to focus on growth."
+    "title": "Efficient",
+    "description": "We believe in delivering solutions that maximize productivity and reduce overhead for businesses, allowing them to focus on growth."
   },
   {
-      "title": "Scalable",
-      "description": "Our technology is designed to grow with our clients, providing adaptable solutions that scale effortlessly with their expanding needs."
+    "title": "Scalable",
+    "description": "Our technology is designed to grow with our clients, providing adaptable solutions that scale effortlessly with their expanding needs."
   },
   {
-      "title": "Innovative",
-      "description": "Innovation is at the heart of what we do. We constantly push the boundaries of what's possible with AI to provide the best solutions."
+    "title": "Innovative",
+    "description": "Innovation is at the heart of what we do. We constantly push the boundaries of what's possible with AI to provide the best solutions."
   },
   {
-      "title": "Empowering",
-      "description": "We empower our clients to achieve their fullest potential by providing tools that transform their operations and drive success."
+    "title": "Empowering",
+    "description": "We empower our clients to achieve their fullest potential by providing tools that transform their operations and drive success."
+  },
+  {
+    "title": "Reliable",
+    "description": "We are committed to building trust with our clients by providing dependable solutions that deliver consistent results every time."
   }
-]
+];
+
 
 export const teamData = [
   {

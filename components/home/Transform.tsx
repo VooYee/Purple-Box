@@ -12,13 +12,11 @@ import { transformWithPurpleBoxData } from '@/lib/constants';
 import GradientWrapper from '../GradientWrapper';
 
 const Transform = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Control
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -27,7 +25,6 @@ const Transform = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
@@ -40,21 +37,20 @@ const Transform = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref} 
       className="wrapper w-full text-center flex flex-col items-center justify-center gap-y-12 relative"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Title */}
+
       <motion.h5
-        className="font-gotham text-3xl lg:text-4xl font-bold"
+        className="font-gotham text-3xl lg:text-4xl font-bold text-white"
         variants={cardVariants}
       >
         Transform <span className="text-gradient">Your E-Commerce</span> With Purple Box
       </motion.h5>
 
-      {/* Animated List of Items */}
       <motion.ul
         className="flex flex-wrap items-center justify-center gap-8 w-full"
         variants={containerVariants}
@@ -77,8 +73,8 @@ const Transform = () => {
               >
                 <Icon className="w-8 h-8" />
                 <div className="flex flex-col items-center gap-y-2">
-                  <p className="text-xl">{item.title}</p>
-                  <p>{item.description}</p>
+                  <p className="text-xl text-white">{item.title}</p>
+                  <p className='text-white'>{item.description}</p>
                 </div>
               </GradientWrapper>
             </motion.li>

@@ -5,7 +5,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const AddOns = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -19,7 +18,6 @@ const AddOns = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -63,7 +61,7 @@ const AddOns = () => {
             whileTap={{ scale: 0.95 }}
           >
             <h4 className="text-xl font-semibold">{addon.title}</h4>
-            <p className="text-purple-200">{addon.price}</p>
+            {/* <p className="text-purple-200">{addon.price}</p> */}
           </motion.div>
         ))}
       </motion.div>

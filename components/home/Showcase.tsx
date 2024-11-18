@@ -12,13 +12,11 @@ import RightInfo from "@/public/home/RightInfo.png";
 import ShowcaseImg from "@/public/home/Showcase.png";
 
 const Showcase = () => {
-  // Intersection Observer
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  // Framer Motion Animation Control
   const animationControls = useAnimation();
 
   React.useEffect(() => {
@@ -27,7 +25,6 @@ const Showcase = () => {
     }
   }, [inView, animationControls]);
 
-  // Variants for animations
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
@@ -50,21 +47,19 @@ const Showcase = () => {
 
   return (
     <motion.div
-      ref={ref} // Ref untuk Intersection Observer
+      ref={ref}
       className="wrapper w-full text-center flex flex-col items-center justify-center gap-y-12 relative"
       initial="hidden"
       animate={animationControls}
       variants={containerVariants}
     >
-      {/* Animated Text */}
       <motion.p
-        className="lg:text-xl text-center"
+        className="lg:text-xl text-center text-white"
         variants={imageVariants}
       >
-        AI-powered multichannel chatbot designed for e-commerce <br className='hidden lg:block' /> businesses to enhance customer acquisition and provide seamless 24/7 support.
+        AI-powered multichannel chatbot designed for e-commerce <br className="hidden lg:block" /> businesses to enhance customer acquisition and provide seamless 24/7 support.
       </motion.p>
 
-      {/* Animated Product Showcase Image */}
       <motion.div variants={imageVariants}>
         <Image 
           src={ShowcaseImg}
@@ -74,18 +69,18 @@ const Showcase = () => {
         />
       </motion.div>
 
-      {/* Floating Right Info Image */}
+      {/* Right Info */}
       <motion.div
-        className="absolute translate-x-[250px] w-[250px] translate-y-[-10px] transition-all hover:scale-125"
+        className="hidden lg:block absolute translate-x-[250px] w-[250px] translate-y-[-10px] transition-all hover:scale-125"
         variants={floatingVariants}
         whileHover={{ scale: 1.2 }}
       >
         <Image src={RightInfo} alt="Right Info" />
       </motion.div>
 
-      {/* Floating Left Info Image */}
+      {/* Left Info */}
       <motion.div
-        className="absolute translate-x-[-250px] w-[250px] translate-y-[100px] transition-all hover:scale-125"
+        className="hidden lg:block absolute translate-x-[-250px] w-[250px] translate-y-[100px] transition-all hover:scale-125"
         variants={floatingLeftVariants}
         whileHover={{ scale: 1.2 }}
       >
