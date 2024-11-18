@@ -1,12 +1,20 @@
 'use client'
 
 // Library Import
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
+
+// Components Import
 import { Button } from "../ui/button";
-import { useEffect } from "react";
+import GetStartedDialog from "./GetStartedDialog";
 
 const FreeTrial = () => {
+  const [isGetStartedDialogOpen, setIsGetStartedDialogOpen] = useState(false);
+  const [isScheduleDemoDialogOpen, setIsScheduleDemoDialogOpen] = useState(false);
+  const router = useRouter();
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -58,6 +66,7 @@ const FreeTrial = () => {
             variant={"default"}
             size={"lg"}
             className="min-w-[300px] md:min-w-[0px] px-6 py-3 text-white bg-gradient-to-r from-purple-500 to-purple-700 rounded-lg shadow-lg transition duration-300 hover:from-purple-600 hover:to-purple-800 transform"
+            onClick={() => setIsGetStartedDialogOpen(true)}
           >
             Get Started
           </Button>
@@ -78,11 +87,14 @@ const FreeTrial = () => {
             variant={"secondary"}
             size={"lg"}
             className="min-w-[300px] md:min-w-[0px] px-6 py-3 text-purple-500 bg-purple-100 rounded-lg transition duration-300 hover:bg-purple-200 transform"
+            onClick={() => router.push("/pricing")}
           >
             Learn More
           </Button>
         </motion.div>
       </motion.div>
+
+      <GetStartedDialog isOpen={isGetStartedDialogOpen} setIsOpen={setIsGetStartedDialogOpen} />
     </motion.div>
   );
 };

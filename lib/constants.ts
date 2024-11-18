@@ -1,3 +1,4 @@
+// Icons imported from lucide-react
 import { LayoutDashboard } from 'lucide-react';
 import { BotMessageSquare } from 'lucide-react';
 import { ChartColumnIncreasing } from 'lucide-react';
