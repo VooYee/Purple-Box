@@ -75,7 +75,8 @@ const GetStartedDialog = ({
                   <FormControl>
                     <Input 
                       {...field} 
-                      className='bg-purple-900 border-white/50 focus-visible:ring-transparent'
+                      className='bg-purple-900 border-white/50 focus-visible:ring-transparent placeholder:text-white/75 placeholder:font-agrandir'
+                      placeholder='Enter your name'
                     />
                   </FormControl>
                   <FormMessage />
@@ -93,7 +94,8 @@ const GetStartedDialog = ({
                   <FormControl>
                     <Input 
                       {...field} 
-                      className='bg-purple-900 border-white/50 focus-visible:ring-transparent'
+                      className='bg-purple-900 border-white/50 focus-visible:ring-transparent placeholder:text-white/75 placeholder:font-agrandir'
+                      placeholder='Enter your company name'
                     />
                   </FormControl>
                   <FormMessage />
@@ -111,7 +113,8 @@ const GetStartedDialog = ({
                   <FormControl>
                     <Input 
                       {...field} 
-                      className='bg-purple-900 border-white/50 focus-visible:ring-transparent'
+                      className='bg-purple-900 border-white/50 focus-visible:ring-transparent placeholder:text-white/75 placeholder:font-agrandir'
+                      placeholder='Enter your website'
                     />
                   </FormControl>
                   <FormMessage />

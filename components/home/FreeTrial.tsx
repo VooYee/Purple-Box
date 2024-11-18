@@ -8,7 +8,8 @@ import { useRouter } from "next/navigation";
 
 // Components Import
 import { Button } from "../ui/button";
-import GetStartedDialog from "./GetStartedDialog";
+import GetStartedDialog from "./dialogs/GetStartedDialog";
+import ScheduleDemoDialog from "./dialogs/ScheduleDemoDialog";
 
 const FreeTrial = () => {
   const [isGetStartedDialogOpen, setIsGetStartedDialogOpen] = useState(false);
@@ -77,6 +78,7 @@ const FreeTrial = () => {
             variant={"outline"}
             size={"lg"}
             className="min-w-[300px] md:min-w-[0px] px-6 py-3 border border-purple-400 text-purple-400 rounded-lg transition duration-300 hover:bg-purple-400 hover:text-white transform"
+            onClick={() => setIsScheduleDemoDialogOpen(true)}
           >
             Schedule A Demo
           </Button>
@@ -95,6 +97,7 @@ const FreeTrial = () => {
       </motion.div>
 
       <GetStartedDialog isOpen={isGetStartedDialogOpen} setIsOpen={setIsGetStartedDialogOpen} />
+      <ScheduleDemoDialog isOpen={isScheduleDemoDialogOpen} setIsOpen={setIsScheduleDemoDialogOpen} />
     </motion.div>
   );
 };
