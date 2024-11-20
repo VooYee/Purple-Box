@@ -52,14 +52,14 @@ const GetStartedDialog = ({
       <DialogContent className='shadow-royal-purple bg-purple-950 border-2 border-purple-300'>
         <DialogHeader>
           <DialogTitle>
-            <span className='font-gotham font-bold text-2xl text-white'>
+            <p className='font-gotham font-bold text-2xl text-white'>
               Get Started
-            </span>
+            </p>
           </DialogTitle>
           <DialogDescription>
-            <span className='font-gotham font-medium text-white'>
+            <p className='font-gotham font-medium text-white'>
               Let&apos;s get you started with Purple Box
-            </span>
+            </p>
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -68,7 +68,7 @@ const GetStartedDialog = ({
               control={form.control}
               name='name'
               render={({ field }) => (
-                <FormItem className='font-gotham font-medium'>
+                <FormItem className='font-gotham font-medium text-white'>
                   <FormLabel>
                     Name
                   </FormLabel>
@@ -88,7 +88,7 @@ const GetStartedDialog = ({
               name='companyName'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='font-gotham font-medium'>
+                  <FormLabel className='font-gotham font-medium text-white'>
                     Company Name
                   </FormLabel>
                   <FormControl>
@@ -107,7 +107,7 @@ const GetStartedDialog = ({
               name='website'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='font-gotham font-medium'>
+                  <FormLabel className='font-gotham font-medium text-white'>
                     Website
                   </FormLabel>
                   <FormControl>
@@ -122,7 +122,7 @@ const GetStartedDialog = ({
               )}
             />
             <Button type='submit' className='w-full bg-purple-600 hover:bg-purple-700' size={"lg"}>
-              <span className='font-gotham font-medium'>Get Started</span>
+              <span className='font-gotham font-medium text-white'>Get Started</span>
             </Button>
           </form>
         </Form>
