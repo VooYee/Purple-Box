@@ -70,7 +70,7 @@ const ScheduleDemoDialog = ({
           </DialogTitle>
           <DialogDescription>
             <span className='font-gotham font-medium text-white'>
-              Let's get you started with Purple Box
+              Let&apos;s get you started with Purple Box
             </span>
           </DialogDescription>
         </DialogHeader>
@@ -136,7 +136,7 @@ const ScheduleDemoDialog = ({
             <FormField 
               control={form.control}
               name='phone'
-              render={({ field }) => (
+              render={() => (
                 <FormItem className='flex flex-col items-start gap-y-2'>
                   <FormLabel className='font-gotham font-medium'>
                     Pick a Date & Time

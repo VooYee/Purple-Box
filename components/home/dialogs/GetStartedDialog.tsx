@@ -58,7 +58,7 @@ const GetStartedDialog = ({
           </DialogTitle>
           <DialogDescription>
             <span className='font-gotham font-medium text-white'>
-              Let's get you started with Purple Box
+              Let&apos;s get you started with Purple Box
             </span>
           </DialogDescription>
         </DialogHeader>
