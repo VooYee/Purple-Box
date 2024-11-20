@@ -4,7 +4,7 @@ import Showcase from "@/components/home/Showcase";
 import Transform from "@/components/home/Transform";
 import FreeTrial from "@/components/home/FreeTrial";
 import ClientSay from "@/components/home/ClientSay";
-import SeeInAction from "@/components/home/SeeInAction";
+// import SeeInAction from "@/components/home/SeeInAction";
 import WhoWeServe from "@/components/home/WhoWeServe";
 
 export default function Home() {
