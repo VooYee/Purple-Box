@@ -84,8 +84,8 @@ const Navbar = () => {
         </Button>
 
         <Sheet>
-          <SheetTrigger>
-            <Menu className='lg:hidden' />
+          <SheetTrigger className='lg:hidden'>
+            <Menu />
           </SheetTrigger>
           <SheetContent className='w-full h-full flex flex-col items-center justify-center gap-y-4 bg-purple-900'>
             {navItems.map((item, index) => (

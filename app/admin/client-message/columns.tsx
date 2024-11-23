@@ -2,26 +2,52 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
+// Columns for Table 1
+export type CompanyData = {
+  name: string
+  companyName: string
+  website: string
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const companyColumns: ColumnDef<CompanyData>[] = [
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "name",
+    header: "Name",
+  },
+  {
+    accessorKey: "companyName",
+    header: "Company Name",
+  },
+  {
+    accessorKey: "website",
+    header: "Website",
+  },
+]
+
+// Columns for Table 2
+export type ContactData = {
+  name: string
+  email: string
+  phone: string
+  date: Date
+}
+
+export const contactColumns: ColumnDef<ContactData>[] = [
+  {
+    accessorKey: "name",
+    header: "Name",
   },
   {
     accessorKey: "email",
     header: "Email",
   },
   {
-    accessorKey: "amount",
-    header: "Amount",
+    accessorKey: "phone",
+    header: "Phone",
+  },
+  {
+    accessorKey: "date",
+    header: "Date",
+    cell: ({ getValue }) => new Date(getValue() as string).toLocaleDateString(),
   },
 ]

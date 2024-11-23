@@ -256,6 +256,9 @@ body {
   .wrapper {
     @apply w-full max-w-7xl mx-auto p-4 md:p-6 lg:p-8 flex flex-col items-center 
   }
+  .table-wrapper {
+    @apply w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col items-start
+  }
   .navbar-wrapper {
     @apply w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8
   }
