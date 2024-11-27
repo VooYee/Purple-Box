@@ -45,9 +45,9 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="w-full space-y-2">
             <h6 className="font-bold text-lg mb-4">Contact Us</h6>
-            <p className="text-purple-200">contact@purplebox.com</p>
-            <p className="text-purple-200">+123 456 7890</p>
-            <p className="text-purple-200">123 Purple St., Suite 101, Metropolis</p>
+            <p className="text-purple-200">info@purple-box.app</p>
+            <p className="text-purple-200">+34 692 09 45 68</p>
+            <p className="text-purple-200">Calle Sant'Engracia, 151, Madrid</p>
           </div>
 
           {/* Newsletter Signup */}
