@@ -7,6 +7,7 @@ import { FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 // Asset Imports
 import PartnerLogo1 from "@/public/Purple-Box-Logo.png";
 import PartnerLogo2 from "@/public/Purple-Box-Logo.png";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,34 +19,42 @@ const Footer = () => {
             <h6 className="font-bold text-lg mb-4">Quick Links</h6>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="hover:text-purple-400">
+                <Link href="/" className="hover:text-purple-400">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about-us" className="hover:text-purple-400">
+                <Link href="/about-us" className="hover:text-purple-400">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/our-services" className="hover:text-purple-400">
+                <Link href="/our-services" className="hover:text-purple-400">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/pricing" className="hover:text-purple-400">
+                <Link href="/pricing" className="hover:text-purple-400">
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cart" className="hover:text-purple-400">
+                <Link href="/cart" className="hover:text-purple-400">
                   Cart
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-purple-400">
+                <Link href="/contact" className="hover:text-purple-400">
                   Contact Us
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-of-service"
+                  className="hover:text-purple-400"
+                >
+                  Terms of Service
+                </Link>
               </li>
             </ul>
           </div>
@@ -129,12 +138,12 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div className="flex space-x-6">
-            <a href="/privacy-policy" className="hover:text-purple-400">
+            <Link href="/privacy-policy" className="hover:text-purple-400">
               Privacy Policy
-            </a>
-            <a href="/terms-of-service" className="hover:text-purple-400">
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-purple-400">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

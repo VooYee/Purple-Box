@@ -1,16 +1,17 @@
-'use client'
+"use client";
 
 // Library Import
-import React from 'react';
-import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 // Asset Import
-import TempImg from '@/public/Purple-Box-Logo.png';
+import TempImg from "@/public/Purple-Box-Logo.png";
 
 // Icon Import
-import { FaLinkedin } from 'react-icons/fa';
+import { FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
 
 const TeamIntroduction = () => {
   // Intersection Observer
@@ -24,7 +25,7 @@ const TeamIntroduction = () => {
 
   React.useEffect(() => {
     if (inView) {
-      animationControls.start('visible');
+      animationControls.start("visible");
     }
   }, [inView, animationControls]);
 
@@ -65,9 +66,21 @@ const TeamIntroduction = () => {
         variants={containerVariants}
       >
         {[
-          { name: 'John Doe', title: 'CEO', bio: 'Expert in AI development and e-commerce innovation.' },
-          { name: 'Jane Smith', title: 'CTO', bio: 'Specialist in scalable tech solutions and AI-driven systems.' },
-          { name: 'Alice Brown', title: 'COO', bio: 'Experienced in operational efficiency and business growth.' },
+          {
+            name: "John Doe",
+            title: "CEO",
+            bio: "Expert in AI development and e-commerce innovation.",
+          },
+          {
+            name: "Jane Smith",
+            title: "CTO",
+            bio: "Specialist in scalable tech solutions and AI-driven systems.",
+          },
+          {
+            name: "Alice Brown",
+            title: "COO",
+            bio: "Experienced in operational efficiency and business growth.",
+          },
         ].map((member, index) => (
           <motion.div
             key={index}
@@ -86,9 +99,12 @@ const TeamIntroduction = () => {
             <h3 className="text-xl font-semibold">{member.name}</h3>
             <p className="text-purple-200">{member.title}</p>
             <p className="text-sm">{member.bio}</p>
-            <a href="#" className="text-purple-400 mt-6 w-full flex justify-center hover:text-purple-500">
+            <Link
+              href="#"
+              className="text-purple-400 mt-6 w-full flex justify-center hover:text-purple-500"
+            >
               <FaLinkedin size={20} />
-            </a>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
